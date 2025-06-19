@@ -1,0 +1,5 @@
+xarm_ros/xarm_bringup
+/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/lib/pkgconfig/xarm_bringup.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/xarm_bringup.pc
+/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/share/xarm_bringup/cmake/xarm_bringupConfig.cmake /home/student/Git-projects/robot_project/devel/share/xarm_bringup/cmake/xarm_bringupConfig.cmake
+/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/share/xarm_bringup/cmake/xarm_bringupConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/xarm_bringup/cmake/xarm_bringupConfig-version.cmake

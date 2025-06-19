@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig-version.cmake

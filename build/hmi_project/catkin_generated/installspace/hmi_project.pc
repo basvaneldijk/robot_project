@@ -1,0 +1,8 @@
+prefix=/home/student/Git-projects/robot_project/install
+
+Name: hmi_project
+Description: Description of hmi_project
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs trajectory_msgs

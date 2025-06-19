@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/camera_demo/share/camera_demo/cmake/camera_demoConfig.cmake

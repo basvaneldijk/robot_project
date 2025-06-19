@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_msgs/lib/python2.7/dist-packages/xarm_msgs/srv/_ClearErr.py

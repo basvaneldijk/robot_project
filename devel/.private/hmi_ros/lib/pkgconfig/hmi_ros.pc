@@ -1,0 +1,8 @@
+prefix=/home/student/Git-projects/robot_project/devel/.private/hmi_ros
+
+Name: hmi_ros
+Description: Description of hmi_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs

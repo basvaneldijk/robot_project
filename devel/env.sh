@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/catkin_tools_prebuild/env.sh

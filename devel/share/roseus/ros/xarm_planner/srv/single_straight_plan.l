@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_planner/share/roseus/ros/xarm_planner/srv/single_straight_plan.l

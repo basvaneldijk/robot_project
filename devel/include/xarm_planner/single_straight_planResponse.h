@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_planner/include/xarm_planner/single_straight_planResponse.h

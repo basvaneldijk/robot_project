@@ -1,0 +1,5 @@
+xarm_ros/xarm6_moveit_config
+/home/student/Git-projects/robot_project/devel/.private/xarm6_moveit_config/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/xarm6_moveit_config/lib/pkgconfig/xarm6_moveit_config.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/xarm6_moveit_config.pc
+/home/student/Git-projects/robot_project/devel/.private/xarm6_moveit_config/share/xarm6_moveit_config/cmake/xarm6_moveit_configConfig.cmake /home/student/Git-projects/robot_project/devel/share/xarm6_moveit_config/cmake/xarm6_moveit_configConfig.cmake
+/home/student/Git-projects/robot_project/devel/.private/xarm6_moveit_config/share/xarm6_moveit_config/cmake/xarm6_moveit_configConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/xarm6_moveit_config/cmake/xarm6_moveit_configConfig-version.cmake

@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_gripper/lib/python2.7/dist-packages/xarm_gripper/msg/_MoveGoal.py

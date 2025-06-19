@@ -1,0 +1,5 @@
+hmi_project
+/home/student/Git-projects/robot_project/devel/.private/hmi_project/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/hmi_project/lib/pkgconfig/hmi_project.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/hmi_project.pc
+/home/student/Git-projects/robot_project/devel/.private/hmi_project/share/hmi_project/cmake/hmi_projectConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/hmi_project/cmake/hmi_projectConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/hmi_project/share/hmi_project/cmake/hmi_projectConfig.cmake /home/student/Git-projects/robot_project/devel/share/hmi_project/cmake/hmi_projectConfig.cmake

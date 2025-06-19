@@ -1,0 +1,8 @@
+prefix=/home/student/Git-projects/robot_project/install
+
+Name: my_demo
+Description: Description of my_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

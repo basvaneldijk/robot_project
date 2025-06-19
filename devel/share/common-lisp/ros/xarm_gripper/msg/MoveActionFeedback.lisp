@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_gripper/share/common-lisp/ros/xarm_gripper/msg/MoveActionFeedback.lisp

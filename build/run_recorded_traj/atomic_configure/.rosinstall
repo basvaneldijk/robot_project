@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/setup.sh

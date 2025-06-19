@@ -1,0 +1,5 @@
+my_xarm_lite6/my_lite6_moveit_config
+/home/student/Git-projects/robot_project/devel/.private/my_lite6_moveit_config/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/my_lite6_moveit_config/lib/pkgconfig/my_lite6_moveit_config.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/my_lite6_moveit_config.pc
+/home/student/Git-projects/robot_project/devel/.private/my_lite6_moveit_config/share/my_lite6_moveit_config/cmake/my_lite6_moveit_configConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/my_lite6_moveit_config/cmake/my_lite6_moveit_configConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/my_lite6_moveit_config/share/my_lite6_moveit_config/cmake/my_lite6_moveit_configConfig.cmake /home/student/Git-projects/robot_project/devel/share/my_lite6_moveit_config/cmake/my_lite6_moveit_configConfig.cmake

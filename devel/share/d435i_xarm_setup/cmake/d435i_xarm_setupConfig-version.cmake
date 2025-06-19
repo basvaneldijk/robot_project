@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/d435i_xarm_setup/share/d435i_xarm_setup/cmake/d435i_xarm_setupConfig-version.cmake

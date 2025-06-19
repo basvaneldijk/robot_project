@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_gripper/share/xarm_gripper/msg/MoveActionFeedback.msg

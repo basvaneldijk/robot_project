@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/hmi_ros/share/hmi_ros/cmake/hmi_rosConfig.cmake

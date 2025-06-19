@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/hmi_project/share/hmi_project/cmake/hmi_projectConfig.cmake

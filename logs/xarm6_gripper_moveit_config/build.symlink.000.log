@@ -1,0 +1,3 @@
+Symlinking /home/student/Git-projects/robot_project/devel/lib/pkgconfig/xarm6_gripper_moveit_config.pc
+Symlinking /home/student/Git-projects/robot_project/devel/share/xarm6_gripper_moveit_config/cmake/xarm6_gripper_moveit_configConfig.cmake
+Symlinking /home/student/Git-projects/robot_project/devel/share/xarm6_gripper_moveit_config/cmake/xarm6_gripper_moveit_configConfig-version.cmake

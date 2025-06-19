@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_planner/share/xarm_planner/cmake/xarm_plannerConfig-version.cmake

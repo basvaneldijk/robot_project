@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm6_moveit_config/share/xarm6_moveit_config/cmake/xarm6_moveit_configConfig.cmake

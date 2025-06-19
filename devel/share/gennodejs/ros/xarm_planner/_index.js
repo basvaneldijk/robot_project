@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_planner/share/gennodejs/ros/xarm_planner/_index.js

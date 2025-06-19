@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm7_vacuum_gripper_moveit_config/share/xarm7_vacuum_gripper_moveit_config/cmake/xarm7_vacuum_gripper_moveit_configConfig-version.cmake

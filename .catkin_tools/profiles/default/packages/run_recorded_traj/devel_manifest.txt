@@ -1,0 +1,6 @@
+xarm_ros/examples/run_recorded_traj
+/home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/lib/run_recorded_traj/xarm_traj_test /home/student/Git-projects/robot_project/devel/lib/run_recorded_traj/xarm_traj_test
+/home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/lib/pkgconfig/run_recorded_traj.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/run_recorded_traj.pc
+/home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/share/run_recorded_traj/cmake/run_recorded_trajConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/run_recorded_traj/cmake/run_recorded_trajConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/run_recorded_traj/share/run_recorded_traj/cmake/run_recorded_trajConfig.cmake /home/student/Git-projects/robot_project/devel/share/run_recorded_traj/cmake/run_recorded_trajConfig.cmake

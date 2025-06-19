@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_msgs/share/common-lisp/ros/xarm_msgs/srv/MoveAxisAngle.lisp

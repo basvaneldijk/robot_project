@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/share/xarm_bringup/cmake/xarm_bringupConfig.cmake

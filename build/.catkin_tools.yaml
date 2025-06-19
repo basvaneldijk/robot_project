@@ -1,0 +1,6 @@
+devel_space: /home/student/Git-projects/robot_project/devel
+install: false
+install_space: /home/student/Git-projects/robot_project/install
+profile: default
+source_space: /home/student/Git-projects/robot_project/src
+workspace: /home/student/Git-projects/robot_project

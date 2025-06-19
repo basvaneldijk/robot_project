@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_controller/share/xarm_controller/cmake/xarm_controllerConfig-version.cmake

@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_gazebo/share/xarm_gazebo/cmake/xarm_gazeboConfig-version.cmake

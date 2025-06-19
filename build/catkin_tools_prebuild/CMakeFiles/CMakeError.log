@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c98bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c98bb.dir/build.make CMakeFiles/cmTC_c98bb.dir/build
+make[1]: Entering directory '/home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c98bb.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c98bb.dir/CheckSymbolExists.c.o   -c /home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c98bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c98bb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c98bb.dir/CheckSymbolExists.c.o  -o cmTC_c98bb 
+CMakeFiles/cmTC_c98bb.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c98bb.dir/build.make:97: recipe for target 'cmTC_c98bb' failed
+make[1]: *** [cmTC_c98bb] Error 1
+make[1]: Leaving directory '/home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c98bb/fast' failed
+make: *** [cmTC_c98bb/fast] Error 2
+
+File /home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a18eb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a18eb.dir/build.make CMakeFiles/cmTC_a18eb.dir/build
+make[1]: Entering directory '/home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a18eb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a18eb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a18eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a18eb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a18eb.dir/CheckFunctionExists.c.o  -o cmTC_a18eb -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a18eb.dir/build.make:97: recipe for target 'cmTC_a18eb' failed
+make[1]: *** [cmTC_a18eb] Error 1
+make[1]: Leaving directory '/home/student/Git-projects/robot_project/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a18eb/fast' failed
+make: *** [cmTC_a18eb/fast] Error 2
+
+

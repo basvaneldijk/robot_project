@@ -1,0 +1,5 @@
+xarm_ros/xarm_vision/camera_demo
+/home/student/Git-projects/robot_project/devel/.private/camera_demo/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/camera_demo/lib/pkgconfig/camera_demo.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/camera_demo.pc
+/home/student/Git-projects/robot_project/devel/.private/camera_demo/share/camera_demo/cmake/camera_demoConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/camera_demo/cmake/camera_demoConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/camera_demo/share/camera_demo/cmake/camera_demoConfig.cmake /home/student/Git-projects/robot_project/devel/share/camera_demo/cmake/camera_demoConfig.cmake

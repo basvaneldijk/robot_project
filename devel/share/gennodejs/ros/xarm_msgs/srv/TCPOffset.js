@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/xarm_msgs/share/gennodejs/ros/xarm_msgs/srv/TCPOffset.js
