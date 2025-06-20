@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import rospy
 import actionlib
-from ufactory_motion.msg import Move_To_Pose, MoveToPoseResult
-from moveit_commander import MoveGroupCommander, RobotCommander, PlanningSceneInterface
+from my_demo.msg import MoveToPose, MoveToPoseResult
+from my_demo.msg import MoveToPoseAction, MoveToPoseResult, MoveToPoseGoal
 from geometry_msgs.msg import Pose
+
 
 class MoveItPlannerServer:
     def __init__(self):

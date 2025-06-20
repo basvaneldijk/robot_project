@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/opt/ros/melodic/share/actionlib_msgs/cmake/../../../lib/actionlib_msgs/genaction.py", line 136, in <module>
+    if __name__ == '__main__': main()
+  File "/opt/ros/melodic/share/actionlib_msgs/cmake/../../../lib/actionlib_msgs/genaction.py", line 97, in main
+    raise ActionSpecException("%s: wrong number of pieces, %d"%(filename,len(pieces)))
+__main__.ActionSpecException: /home/student/Git-projects/robot_project/src/my_xarm_lite6/my_demo/action/CoordCommand.action: wrong number of pieces, 2
+[31m[1mCMake Error[0m at /opt/ros/melodic/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+
+  execute_process(/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/env_cached.sh
+  "/usr/bin/python2"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../../../lib/actionlib_msgs/genaction.py"
+  "/home/student/Git-projects/robot_project/src/my_xarm_lite6/my_demo/action/CoordCommand.action"
+  "-o"
+  "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg")
+  returned error code 1
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/melodic/share/actionlib_msgs/cmake/actionlib_msgs-extras.cmake:67 (safe_execute_process)
+  CMakeLists.txt:22 (add_action_files)
+
+
+make: *** [cmake_check_build_system] Error 1

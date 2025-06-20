@@ -1,0 +1,6 @@
+# CoordCommand.action
+geometry_msgs/Pose target_pose
+---
+bool success
+string message
+

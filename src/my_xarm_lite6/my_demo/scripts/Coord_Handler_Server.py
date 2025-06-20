@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 import actionlib
-from ufactory_motion.msg import Coord_Command, CoordCommandResult, Move_To_Pose, MoveToPoseGoal
+from my_demo.msg import CoordCommand, CoordCommandResult, MoveToPose, MoveToPoseGoal
 
 class CoordHandlerServer:
     def __init__(self):

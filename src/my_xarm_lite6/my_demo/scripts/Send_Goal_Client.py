@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 import actionlib
-from ufactory_motion.msg import Coord_Command
+from my_demo.msg import CoordCommand
 from geometry_msgs.msg import Pose
 
 def send_goal():
@@ -21,7 +21,8 @@ def send_goal():
     client.wait_for_result()
 
     result = client.get_result()
-    rospy.loginfo(f"Resultaat: success={result.success}, message='{result.message}'")
+    #rospy.loginfo(f"Resultaat: success={result.success}, message='{result.message}'")
+    rospy.loginfo("Resultaat: success=%s, message='%s'" % (result.success, result.message))
 
 if __name__ == '__main__':
     send_goal()
