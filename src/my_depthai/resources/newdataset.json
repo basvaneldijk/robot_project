@@ -1,0 +1,63 @@
+{
+    "model": {
+        "xml": "newdataset.xml",
+        "bin": "newdataset.bin"
+    },
+    "nn_config": {
+        "output_format": "detection",
+        "NN_family": "YOLO",
+        "input_size": "640x640",
+        "NN_specific_metadata": {
+            "classes": 4,
+            "coordinates": 4,
+            "anchors": [
+                139.625,
+                15.671875,
+                20.8125,
+                138.125,
+                167.75,
+                36.28125,
+                44.21875,
+                163.625,
+                170.0,
+                45.5625,
+                133.0,
+                63.03125,
+                85.75,
+                139.625,
+                287.5,
+                72.9375,
+                95.0625,
+                417.25
+            ],
+            "anchor_masks": {
+                "side80": [
+                    0,
+                    1,
+                    2
+                ],
+                "side40": [
+                    3,
+                    4,
+                    5
+                ],
+                "side20": [
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "iou_threshold": 0.5,
+            "confidence_threshold": 0.5
+        }
+    },
+    "mappings": {
+        "labels": [
+            "1-norm",
+            "2-dik",
+            "3-rub",
+            "4-pen"
+        ]
+    },
+    "version": 1
+}
