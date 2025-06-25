@@ -1,80 +1,59 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
+# -- coding: utf-8 --
 import rospy
 import sys
-import copy
-import moveit_msgs.msg
-import geometry_msgs.msg
 import moveit_commander
-from std_msgs.msg import Empty
-import math
-import actionlib
 from geometry_msgs.msg import Pose
-from geometry_msgs.msg import Quaternion
+from tf.transformations import quaternion_from_euler
 
-from tf.transformations import *
+def move_to_pose_goal(group, x, y, z, roll, pitch, yaw):
+    rospy.loginfo("== Beweegt naar pose goal ==")
 
-import tf2_ros
-import tf2_geometry_msgs
+    # Zet de startpositie op de huidige toestand
+    group.set_start_state_to_current_state()
 
-rospy.init_node('test')
+    # Geef meer tijd om een plan te vinden
+    group.set_planning_time(1000.0)
 
-tf_buffer = tf2_ros.Buffer(rospy.Duration(100.0))  # tf buffer length
-tf_listener = tf2_ros.TransformListener(tf_buffer)
+    q = quaternion_from_euler(roll, pitch, yaw)
 
+    pose_target = Pose()
+    pose_target.position.x = x
+    pose_target.position.y = y
+    pose_target.position.z = z
+    pose_target.orientation.x = q[0]
+    pose_target.orientation.y = q[1]
+    pose_target.orientation.z = q[2]
+    pose_target.orientation.w = q[3]
 
-moveit_commander.roscpp_initialize(sys.argv)
-robot=moveit_commander.RobotCommander()
-scene=moveit_commander.PlanningSceneInterface()
-group=moveit_commander.MoveGroupCommander('arm')
-display_trajectory_publisher=rospy.Publisher('/move_group/display_planned_path',moveit_msgs.msg.DisplayTrajectory)
+    group.set_pose_target(pose_target)
+    success = group.go(wait=True)
+    group.stop()
+    group.clear_pose_targets()
 
-print("== go to home ==")
-target_values= group.get_named_target_values("home")
-group.go(target_values, wait = True)
+    if success:
+        rospy.loginfo("== Beweging voltooid ==")
+    else:
+        rospy.logwarn("[!] Kon niet naar doelpose bewegen")
 
-print("== go to left ==")
-target_values= group.get_named_target_values("bakje3")
-group.go(target_values, wait = True)
+if __name__ == '__main__':
+    moveit_commander.roscpp_initialize(sys.argv)
+    rospy.init_node('sorteer_robot_pose_routine', anonymous=True)
 
-print("== move down, 50 mm ==")
+    robot = moveit_commander.RobotCommander()
+    scene = moveit_commander.PlanningSceneInterface()
+    group = moveit_commander.MoveGroupCommander('arm')
+    rospy.sleep(2.0)
 
-pose=group.get_current_pose()
-posetarget = pose
-posetarget.pose.position.z-=0.05
-group.set_pose_target(posetarget)
-plan=group.plan()
-group.go(wait=True)
+    # Naar rechts 7 cm (y = +0.07), naar voren 20 cm (x = +0.20)
+    x = 0.1
+    y = -0.1
+    z = 0.1
+    roll = 0.0
+    pitch = 0.0
+    yaw = 0.0  # 90 graden
 
-print("== go to test IK ==")
-transform = tf_buffer.lookup_transform('world', 'ik_testpoint', rospy.Time())
+    move_to_pose_goal(group, x, y, z, roll, pitch, yaw)
 
-destination_pose = Pose()
-destination_pose.position = transform.transform.translation
-destination_pose.orientation = transform.transform.rotation
-
-q_orig = [transform.transform.rotation.x, transform.transform.rotation.y, transform.transform.rotation.z, transform.transform.rotation.w]
-q_rot = quaternion_from_euler(math.pi, 0, 0) # rotate along x-axis to meet z-face
-q_new = quaternion_multiply(q_rot, q_orig)
-transform.transform.rotation.x = q_new[0]
-transform.transform.rotation.y = q_new[1]
-transform.transform.rotation.z = q_new[2]
-transform.transform.rotation.w = q_new[3]
-
-group.set_pose_target(destination_pose)
-plan=group.plan()
-group.go(wait=True)
-
-print("== go to right ==")
-target_values= group.get_named_target_values("right")
-group.go(target_values, wait = True)
-
-print("== go to home ==")
-target_values= group.get_named_target_values("home")
-group.go(target_values, wait = True)
-
-print("== go to resting ==")
-target_values= group.get_named_target_values("resting")
-group.go(target_values, wait = True)
-
-print("== ready ==")
-
+    rospy.loginfo("== Routine voltooid ==")
+    moveit_commander.roscpp_shutdown()

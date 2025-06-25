@@ -17,9 +17,9 @@
   </group>
 
 
-  <!-- Jouw eigen nodes -->
+  <!-- Jouw eigen nodes
   <node pkg="my_demo" name="Planner_Server" type="Moveit_Planner_Action_Server.py" output="screen"/>
   <node pkg="my_demo" name="Coord_Handler" type="Coord_Handler_Server.py" output="screen"/>
-  <node pkg="my_demo" name="Test_Client" type="Send_Goal_Client.py" output="screen"/>
+  <node pkg="my_demo" name="Test_Client" type="Send_Goal_Client.py" output="screen"/>-->
 </launch>
 
