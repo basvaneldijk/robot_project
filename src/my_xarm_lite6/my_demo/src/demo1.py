@@ -39,7 +39,7 @@ if __name__ == '__main__':
     group = moveit_commander.MoveGroupCommander('arm')
     rospy.sleep(2.0)
 
-    # ⬇️ HIER PAS JE JE COÖRDINATEN AAN
+    # HIER PAS JE JE COORDINATEN AAN
     x = 0.4
     y = 0.1
     z = 0.3
