@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_ros_msgs/share/common-lisp/ros/depthai_ros_msgs/msg/HandLandmarkArray.lisp

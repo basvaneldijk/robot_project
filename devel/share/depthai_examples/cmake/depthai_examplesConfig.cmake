@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_examples/share/depthai_examples/cmake/depthai_examplesConfig.cmake

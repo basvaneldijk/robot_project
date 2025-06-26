@@ -1,0 +1,6 @@
+depth-ai-avans/depthai_bridge
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/lib/libdepthai_bridge.so /home/student/Git-projects/robot_project/devel/lib/libdepthai_bridge.so
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/lib/pkgconfig/depthai_bridge.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/depthai_bridge.pc
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/share/depthai_bridge/cmake/depthai_bridgeConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/depthai_bridge/cmake/depthai_bridgeConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/share/depthai_bridge/cmake/depthai_bridgeConfig.cmake /home/student/Git-projects/robot_project/devel/share/depthai_bridge/cmake/depthai_bridgeConfig.cmake

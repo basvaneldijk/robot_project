@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/share/my_depthai/cmake/my_depthaiConfig-version.cmake

@@ -48,6 +48,62 @@
         <joint name="joint5" value="0.753" />
         <joint name="joint6" value="0" />
     </group_state>
+    <group_state name="bakLB" group="arm">
+        <joint name="joint1" value="1.4539" />
+        <joint name="joint2" value="0.1535" />
+        <joint name="joint3" value="0.719076" />
+        <joint name="joint4" value="0" />
+        <joint name="joint5" value="0.5654" />
+        <joint name="joint6" value="1.4504" />
+    </group_state>
+    <group_state name="bakRB" group="arm">
+        <joint name="joint1" value="1.5394" />
+        <joint name="joint2" value="0.5724" />
+        <joint name="joint3" value="1.3055" />
+        <joint name="joint4" value="-0.18675" />
+        <joint name="joint5" value="0.68067" />
+        <joint name="joint6" value="-1.5289" />
+    </group_state>
+    <group_state name="bakLo" group="arm">
+        <joint name="joint1" value="1.1798" />
+        <joint name="joint2" value="0.589921" />
+        <joint name="joint3" value="0.771436" />
+        <joint name="joint4" value="2.4679" />
+        <joint name="joint5" value="-0.118682" />
+        <joint name="joint6" value="-1.3614" />
+    </group_state>
+    <group_state name="bakRO" group="arm">
+        <joint name="joint1" value="1.2846" />
+        <joint name="joint2" value="0.92677" />
+        <joint name="joint3" value="1.4172" />
+        <joint name="joint4" value="3.0596" />
+        <joint name="joint5" value="-0.424115" />
+        <joint name="joint6" value="-1.8466" />
+    </group_state>
+    <group_state name="sort" group="arm">
+        <joint name="joint1" value="0" />
+        <joint name="joint2" value="0.637045" />
+        <joint name="joint3" value="1.5638" />
+        <joint name="joint4" value="-0.020944" />
+        <joint name="joint5" value="0.904081" />
+        <joint name="joint6" value="1.5638" />
+    </group_state>
+    <group_state name="veilig" group="arm">
+        <joint name="joint1" value="1.04894" />
+        <joint name="joint2" value="0.633555" />
+        <joint name="joint3" value="1.30027" />
+        <joint name="joint4" value="-0.015708" />
+        <joint name="joint5" value="0.666716" />
+        <joint name="joint6" value="1.00007" />
+    </group_state>
+    <group_state name="carrousel" group="arm">
+        <joint name="joint1" value="-0.0872665" />
+        <joint name="joint2" value="0.719076" />
+        <joint name="joint3" value="1.66155" />
+        <joint name="joint4" value="0.0767945" />
+        <joint name="joint5" value="0.958186" />
+        <joint name="joint6" value="1.4399" />
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="end_effector" parent_link="link6" group="tool_end" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
@@ -70,11 +126,11 @@
     <disable_collisions link1="link3" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link4" link2="link5" reason="Adjacent" />
     <disable_collisions link1="link4" link2="link6" reason="Never" />
-    <disable_collisions link1="link4" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link5" link2="link6" reason="Adjacent" />
     <disable_collisions link1="link5" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link6" link2="uflite_gripper_link" reason="Adjacent" />
     <disable_collisions link1="link_base" link2="mountingplate_link" reason="Adjacent" />
     <disable_collisions link1="link_base" link2="robotopstelling_link" reason="Never" />
+    <disable_collisions link1="link_base" link2="uflite_gripper_link" reason="Default" />
     <disable_collisions link1="mountingplate_link" link2="robotopstelling_link" reason="Default" />
 </robot>

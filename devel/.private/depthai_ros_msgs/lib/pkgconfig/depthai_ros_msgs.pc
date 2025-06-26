@@ -1,0 +1,8 @@
+prefix=/home/student/Git-projects/robot_project/devel/.private/depthai_ros_msgs
+
+Name: depthai_ros_msgs
+Description: Description of depthai_ros_msgs
+Version: 2.6.4
+Cflags: -I/home/student/Git-projects/robot_project/devel/.private/depthai_ros_msgs/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs message_runtime sensor_msgs std_msgs vision_msgs

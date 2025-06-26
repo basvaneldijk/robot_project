@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/share/depthai_bridge/cmake/depthai_bridgeConfig.cmake

@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/include/depthai_ros_driver/parametersConfig.h

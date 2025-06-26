@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_ros_msgs/share/roseus/ros/depthai_ros_msgs/srv/TriggerNamed.l

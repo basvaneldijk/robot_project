@@ -1,14 +1,18 @@
 #!/usr/bin/env python
+
 import rospy
 import actionlib
-from my_demo.msg import MoveToPose, MoveToPoseResult
-from my_demo.msg import MoveToPoseAction, MoveToPoseResult, MoveToPoseGoal
+import moveit_commander
+from moveit_commander import MoveGroupCommander
 from geometry_msgs.msg import Pose
 
+from my_demo.msg import MoveToPoseAction, MoveToPoseGoal, MoveToPoseResult
 
 class MoveItPlannerServer:
     def __init__(self):
-        self.server = actionlib.SimpleActionServer('moveit_planner', Move_To_Pose, self.execute_cb, False)
+        moveit_commander.roscpp_initialize([])  # Initialiseer MoveIt Commander
+
+        self.server = actionlib.SimpleActionServer('moveit_planner', MoveToPoseAction, self.execute_cb, False)
         self.group = MoveGroupCommander("manipulator")
         self.server.start()
         rospy.loginfo("MoveItPlannerServer actief")
@@ -26,10 +30,10 @@ class MoveItPlannerServer:
         else:
             msg = "Planning mislukt"
 
-        self.server.set_succeeded(MoveToPoseResult(success=success, message=msg))
+        result = MoveToPoseResult(success=success, message=msg)
+        self.server.set_succeeded(result)
 
 if __name__ == '__main__':
     rospy.init_node('Moveit_Planner_Action_Server')
     MoveItPlannerServer()
     rospy.spin()
-

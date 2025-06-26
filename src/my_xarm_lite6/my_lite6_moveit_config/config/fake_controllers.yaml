@@ -1,6 +1,6 @@
 controller_list:
   - name: fake_arm_controller
-    type: interpolate
+    type: $(arg fake_execution_type)
     joints:
       - joint1
       - joint2
@@ -9,7 +9,7 @@ controller_list:
       - joint5
       - joint6
   - name: fake_tool_end_controller
-    type: interpolate
+    type: $(arg fake_execution_type)
     joints:
       []
 initial:  # Define initial robot poses.

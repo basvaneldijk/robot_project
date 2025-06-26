@@ -1,0 +1,7 @@
+my_depthai
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/libnodelet_stereo.so /home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/my_depthai/stereo_inertial_nn_node /home/student/Git-projects/robot_project/devel/lib/my_depthai/stereo_inertial_nn_node
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/pkgconfig/my_depthai.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/my_depthai.pc
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/share/my_depthai/cmake/my_depthaiConfig.cmake /home/student/Git-projects/robot_project/devel/share/my_depthai/cmake/my_depthaiConfig.cmake
+/home/student/Git-projects/robot_project/devel/.private/my_depthai/share/my_depthai/cmake/my_depthaiConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/my_depthai/cmake/my_depthaiConfig-version.cmake

@@ -1,0 +1,120 @@
+[  0%] Built target dynamic_reconfigure_gencfg
+[  4%] [34m[1mGenerating dynamic reconfigure files from cfg/parameters.cfg: /home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/include/depthai_ros_driver/parametersConfig.h /home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/lib/python2.7/dist-packages/depthai_ros_driver/cfg/parametersConfig.py[0m
+[  4%] Built target bond_generate_messages_nodejs
+[  4%] Built target bond_generate_messages_cpp
+[  4%] Built target nodelet_generate_messages_nodejs
+Generating reconfiguration files for parameters in depthai_ros_driver
+[  4%] Built target nodelet_generate_messages_lisp
+Wrote header file in /home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/include/depthai_ros_driver/parametersConfig.h
+[  4%] Built target nodelet_generate_messages_eus
+[  4%] Built target bond_generate_messages_py
+[  4%] Built target depthai_ros_driver_gencfg
+[  4%] Built target nodelet_generate_messages_cpp
+[  4%] Built target stereo_msgs_generate_messages_py
+[  4%] Built target stereo_msgs_generate_messages_nodejs
+[  4%] Built target stereo_msgs_generate_messages_eus
+[  4%] Built target stereo_msgs_generate_messages_cpp
+[  4%] Built target vision_msgs_generate_messages_eus
+[  4%] Built target vision_msgs_generate_messages_nodejs
+[  4%] Built target depthai_ros_msgs_generate_messages_lisp
+[  4%] Built target vision_msgs_generate_messages_cpp
+[  4%] Built target depthai_ros_msgs_generate_messages_eus
+[  4%] Built target depthai_ros_msgs_generate_messages_cpp
+[  4%] Built target geometry_msgs_generate_messages_py
+[  4%] Built target dynamic_reconfigure_generate_messages_py
+[  4%] Built target sensor_msgs_generate_messages_cpp
+[  4%] Built target sensor_msgs_generate_messages_eus
+[  4%] Built target std_msgs_generate_messages_lisp
+[  4%] Built target stereo_msgs_generate_messages_lisp
+[  4%] Built target geometry_msgs_generate_messages_lisp
+[  4%] Built target geometry_msgs_generate_messages_cpp
+[  4%] Built target sensor_msgs_generate_messages_py
+[  4%] Built target vision_msgs_generate_messages_py
+[  4%] Built target roscpp_generate_messages_cpp
+[  4%] Built target sensor_msgs_generate_messages_nodejs
+[  4%] Built target vision_msgs_generate_messages_lisp
+[  4%] Built target roscpp_generate_messages_py
+[  4%] Built target std_msgs_generate_messages_cpp
+[  4%] Built target nodelet_generate_messages_py
+[  4%] Built target depthai_ros_msgs_generate_messages_py
+[  4%] Built target geometry_msgs_generate_messages_nodejs
+[  4%] Built target bond_generate_messages_eus
+[  4%] Built target roscpp_generate_messages_lisp
+[  4%] Built target sensor_msgs_generate_messages_lisp
+[  4%] Built target std_msgs_generate_messages_eus
+[  4%] Built target rosgraph_msgs_generate_messages_nodejs
+[  4%] Built target depthai_ros_msgs_generate_messages_nodejs
+[  4%] Built target rosgraph_msgs_generate_messages_py
+[  4%] Built target bond_generate_messages_lisp
+[  4%] Built target std_msgs_generate_messages_nodejs
+[  4%] Built target dynamic_reconfigure_generate_messages_eus
+[  4%] Built target std_msgs_generate_messages_py
+[  4%] Built target geometry_msgs_generate_messages_eus
+[  4%] Built target roscpp_generate_messages_nodejs
+[  4%] Built target roscpp_generate_messages_eus
+[  4%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  4%] Built target rosgraph_msgs_generate_messages_eus
+[  4%] Built target rosgraph_msgs_generate_messages_lisp
+[  4%] Built target rosgraph_msgs_generate_messages_cpp
+[  4%] Built target dynamic_reconfigure_generate_messages_lisp
+[  4%] Built target dynamic_reconfigure_generate_messages_cpp
+[35m[1mScanning dependencies of target depthai_ros_driver[0m
+[  8%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/pipeline_generator.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/camera.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/pipeline_generator.cpp:8[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 17%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/sensors/imu.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/sensors/rgb.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/rgb.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/rgb.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 26%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/sensors/mono.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/sensors/camera_sensor.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/mono.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/mono.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/mono.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/camera_sensor.cpp:4[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 34%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/stereo.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/nn_wrapper.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/stereo.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/stereo.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 43%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/spatial_nn_wrapper.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/segmentation.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/mobilenet.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/yolo.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/spatial_mobilenet.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/dai_nodes/nn/spatial_yolo.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/camera_param_handler.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/imu_param_handler.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/nn_param_handler.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/rgb_param_handler.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/param_handlers/rgb_param_handler.hpp:7[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/param_handlers/rgb_param_handler.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 86%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/mono_param_handler.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/depthai_ros_driver.dir/src/param_handlers/stereo_param_handler.cpp.o[0m
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/param_handlers/mono_param_handler.hpp:7[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/param_handlers/mono_param_handler.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+[ 95%] [32m[1mLinking CXX shared library /home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/lib/libdepthai_ros_driver.so[0m
+[100%] Built target depthai_ros_driver

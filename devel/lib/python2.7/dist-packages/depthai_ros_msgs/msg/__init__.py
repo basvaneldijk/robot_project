@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_ros_msgs/lib/python2.7/dist-packages/depthai_ros_msgs/msg/__init__.py

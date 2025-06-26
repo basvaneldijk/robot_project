@@ -1,0 +1,37 @@
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/pipeline_generator.cpp:8[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/rgb.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/rgb.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/mono.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/mono.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/mono.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/sensors/camera_sensor.cpp:4[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/stereo.hpp:3:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/dai_nodes/stereo.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/param_handlers/rgb_param_handler.hpp:7[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/param_handlers/rgb_param_handler.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K
+In file included from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/dai_nodes/sensors/sensor_helpers.hpp:6:0[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/include/depthai_ros_driver/param_handlers/mono_param_handler.hpp:7[m[K,
+                 from [01m[K/home/student/Git-projects/robot_project/src/depth-ai-avans/depthai_ros_driver/src/param_handlers/mono_param_handler.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/camera_info_manager/camera_info_manager.h:241:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K // namespace camera_info_manager
+  [01;35m[K^[m[K

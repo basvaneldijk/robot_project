@@ -1,0 +1,12 @@
+Symlinking /home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/rgb_subscriber_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/crop_control_service
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/rgb_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/rgb_stereo_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/yolov4_spatial_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/stereo_inertial_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/stereo_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/depthai_examples/mobilenet_node
+Symlinking /home/student/Git-projects/robot_project/devel/lib/pkgconfig/depthai_examples.pc
+Symlinking /home/student/Git-projects/robot_project/devel/share/depthai_examples/cmake/depthai_examplesConfig.cmake
+Symlinking /home/student/Git-projects/robot_project/devel/share/depthai_examples/cmake/depthai_examplesConfig-version.cmake

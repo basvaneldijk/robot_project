@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_ros_driver/share/depthai_ros_driver/cmake/depthai_ros_driverConfig-version.cmake

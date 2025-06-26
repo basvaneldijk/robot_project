@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/lib;/opt/ros/melodic/lib")

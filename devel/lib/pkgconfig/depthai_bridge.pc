@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/depthai_bridge/lib/pkgconfig/depthai_bridge.pc

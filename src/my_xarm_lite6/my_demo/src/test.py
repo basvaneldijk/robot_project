@@ -42,11 +42,14 @@ def go_pose(x, y, z):
 # Eerst naar 'home'
 go_named("home")
 
+# Daarna Sorteerband
+go_named("carrousel")
+
 # Daarna Sorteerunit
-go_named("sort")
+go_named("home")
 
 # Dan naar bakje 1 (voorbeeldpositie)
-go_named("bakRO")
+go_named("bakRB")
 
 # Terug naar 'home' 
 go_named("home")
