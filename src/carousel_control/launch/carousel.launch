@@ -1,0 +1,1 @@
+<launch> <node name="carousel_node" pkg="carousel_control" type="carousel_node.py" output="screen" /> </launch>
