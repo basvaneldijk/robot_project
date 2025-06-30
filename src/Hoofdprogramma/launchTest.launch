@@ -1,0 +1,12 @@
+<launch> <node name="carousel_node" pkg="carousel_control" type="carousel_node.py" output="screen" /> </launch>
+
+<launch>
+  <!-- GUI Node -->
+  <node pkg="hmi_ros" type="hmi_gui.py" name="hmi_gui" output="screen" />
+
+  <!-- Status-simulator Node -->
+  <node pkg="hmi_ros" type="status_simulator.py" name="status_simulator" output="screen" />
+
+  <!-- Robot-aansturing Node -->
+  <node pkg="hmi_ros" type="hmi_to_robot.py" name="hmi_to_robot" output="screen" />
+</launch>
