@@ -18,7 +18,7 @@ class CarouselController:
             exit(1)
 
         # Subscriber voor commando's
-        rospy.Subscriber('/hmi_commands', String, self.command_callback)
+        rospy.Subscriber('/carousel_command', String, self.command_callback)
 
         # Publisher voor status (optioneel)
         self.status_pub = rospy.Publisher('/carousel_status', String, queue_size=10)

@@ -84,7 +84,7 @@ class MainController:
             bak = bak_mapping.get(kwast_type, "bak_onbekend")
             self.robot_pub.publish(bak)
             rospy.loginfo("Stuur robot naar: " + bak)
-``
+
             if self.cyclus_mode:
                 # wacht even en begin opnieuw
                 rospy.sleep(2)

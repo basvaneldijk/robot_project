@@ -1,5 +1,9 @@
 
 <launch>
+  <!-- Hoofdprogramma Node -->
+  <node pkg="hoofdprogramma" type="hoofdprogramma.py" name="main_controller" output="screen" />
+  
+  <!-- Carrousel Node -->
   <node name="carousel_node" pkg="carousel_control" type="carousel_node.py" output="screen" />
 
   <!-- GUI Node -->
