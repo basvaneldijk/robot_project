@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="camera" params="">
+
+    <xacro:property name="mesh_file" value="package://my_lite6_description/meshes/Camera.STL"/>
+    <xacro:property name="mesh_scale" value="1 1 1"/>
+
+    <link name="camera_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="${mesh_file}" scale="${mesh_scale}"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="${mesh_file}" scale="${mesh_scale}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0"
+                 izz="0.01"/>
+      </inertial>
+    </link>
+
+    <joint name="camera_to_opstelling" type="fixed">
+      <parent link="world"/>
+      <child link="camera_link"/>
+      <origin xyz="0.1475 0.0775 0.8475" rpy="3.14 0 -1.57"/>
+    </joint>
+
+  </xacro:macro>
+
+</robot>
+
