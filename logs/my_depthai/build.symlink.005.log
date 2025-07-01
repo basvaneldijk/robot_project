@@ -1,0 +1,7 @@
+Warning: Cannot symlink from /home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/libnodelet_stereo.so to existing file /home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so
+Warning: Source hash: b09d89e43d44e7a63dddc66aa64bf1ed
+Warning: Dest hash: 86c401cce50a2331ae75b8296df34541
+Linked: (/home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/my_depthai/stereo_inertial_nn_node, /home/student/Git-projects/robot_project/devel/lib/my_depthai/stereo_inertial_nn_node)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/pkgconfig/my_depthai.pc, /home/student/Git-projects/robot_project/devel/lib/pkgconfig/my_depthai.pc)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/my_depthai/share/my_depthai/cmake/my_depthaiConfig.cmake, /home/student/Git-projects/robot_project/devel/share/my_depthai/cmake/my_depthaiConfig.cmake)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/my_depthai/share/my_depthai/cmake/my_depthaiConfig-version.cmake, /home/student/Git-projects/robot_project/devel/share/my_depthai/cmake/my_depthaiConfig-version.cmake)

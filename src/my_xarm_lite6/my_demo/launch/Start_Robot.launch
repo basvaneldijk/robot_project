@@ -1,26 +1,26 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <launch>
 
   <arg name="sim" default="false"/>
   <arg name="robot_ip" default="192.168.1.158" />
 
-  <!-- startup ros_control for real robot -->
+  <!-- Start robot (real of sim) -->
   <group unless="$(arg sim)">
+    <!-- Start echte robot -->
     <include file="$(find my_lite6_moveit_config)/launch/realMove_exec.launch">
       <arg name="robot_ip" value="$(arg robot_ip)" />
     </include>
   </group>
 
-  <!-- startup simulated (rviz)world and spawn robot-->
   <group if="$(arg sim)">
+     <!--Start simulatie-->
     <include file="$(find my_lite6_moveit_config)/launch/demo.launch"/>
   </group>
-
-
-  <!-- Jouw eigen nodes -->
-  <node pkg="my_demo" name="Planner_Server" type="Moveit_Planner_Action_Server.py" output="screen"/>
-  <node pkg="my_demo" name="Coord_Handler" type="Coord_Handler_Server.py" output="screen"/>
-<!--
-  <node pkg="my_demo" name="Test_Client" type="Send_Goal_Client.py" output="screen"/> -->
+ 
+  <!-- START MOVEIT ALWAYS 
+  <include file="$(find my_lite6_moveit_config)/launch/move_group.launch" />
+   -->
+  <!-- Eventueel ook RViz starten
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_lite6_moveit_config)/launch/moveit.rviz" required="false" />
+-->
 </launch>
-

@@ -3,7 +3,7 @@
 
   <xacro:macro name="robotopstelling" params="">
 
-    <xacro:property name="mesh_file" value="package://my_lite6_description/meshes/RobotOpstelling4.STL"/>
+    <xacro:property name="mesh_file" value="package://my_lite6_description/meshes/RobotOpstelling10.STL"/>
     <xacro:property name="mesh_scale" value="1 1 1"/>
 
     <link name="robotopstelling_link">

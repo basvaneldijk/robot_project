@@ -48,48 +48,48 @@
         <joint name="joint5" value="0.753" />
         <joint name="joint6" value="0" />
     </group_state>
-    <group_state name="bakLB" group="arm">
-        <joint name="joint1" value="1.4539" />
-        <joint name="joint2" value="0.1535" />
-        <joint name="joint3" value="0.719076" />
-        <joint name="joint4" value="0" />
-        <joint name="joint5" value="0.5654" />
-        <joint name="joint6" value="1.4504" />
+    <group_state name="BakLB" group="arm">
+        <joint name="joint1" value="1.475" />
+        <joint name="joint2" value="0.1361" />
+        <joint name="joint3" value="0.6999" />
+        <joint name="joint4" value="-0.0366" />
+        <joint name="joint5" value="0.4663" />
+        <joint name="joint6" value="-1.8" />
     </group_state>
-    <group_state name="bakRB" group="arm">
-        <joint name="joint1" value="1.5394" />
-        <joint name="joint2" value="0.5724" />
-        <joint name="joint3" value="1.3055" />
-        <joint name="joint4" value="-0.18675" />
-        <joint name="joint5" value="0.68067" />
-        <joint name="joint6" value="-1.5289" />
+    <group_state name="BakRB" group="arm">
+        <joint name="joint1" value="1.5" />
+        <joint name="joint2" value="0.6219" />
+        <joint name="joint3" value="1.32" />
+        <joint name="joint4" value="0.0226" />
+        <joint name="joint5" value="0.6033" />
+        <joint name="joint6" value="-1.7" />
     </group_state>
-    <group_state name="bakLo" group="arm">
-        <joint name="joint1" value="1.1798" />
-        <joint name="joint2" value="0.589921" />
-        <joint name="joint3" value="0.771436" />
-        <joint name="joint4" value="2.4679" />
-        <joint name="joint5" value="-0.118682" />
-        <joint name="joint6" value="-1.3614" />
+    <group_state name="BakLO" group="arm">
+        <joint name="joint1" value="1.1" />
+        <joint name="joint2" value="0.6195" />
+        <joint name="joint3" value="0.8953" />
+        <joint name="joint4" value="-0.2879" />
+        <joint name="joint5" value="0.2268" />
+        <joint name="joint6" value="1.3264" />
     </group_state>
-    <group_state name="bakRO" group="arm">
-        <joint name="joint1" value="1.2846" />
-        <joint name="joint2" value="0.92677" />
-        <joint name="joint3" value="1.4172" />
-        <joint name="joint4" value="3.0596" />
-        <joint name="joint5" value="-0.424115" />
-        <joint name="joint6" value="-1.8466" />
+    <group_state name="BakRO" group="arm">
+        <joint name="joint1" value="1.15" />
+        <joint name="joint2" value="0.9634" />
+        <joint name="joint3" value="1.5306" />
+        <joint name="joint4" value="0.0244" />
+        <joint name="joint5" value="0.5066" />
+        <joint name="joint6" value="-2.14" />
     </group_state>
     <group_state name="sort" group="arm">
-        <joint name="joint1" value="0" />
-        <joint name="joint2" value="0.637045" />
-        <joint name="joint3" value="1.5638" />
-        <joint name="joint4" value="-0.020944" />
-        <joint name="joint5" value="0.904081" />
-        <joint name="joint6" value="1.5638" />
+        <joint name="joint1" value="-0.0366" />
+        <joint name="joint2" value="0.7243" />
+        <joint name="joint3" value="1.6632" />
+        <joint name="joint4" value="0" />
+        <joint name="joint5" value="0.993" />
+        <joint name="joint6" value="-1.5089" />
     </group_state>
     <group_state name="veilig" group="arm">
-        <joint name="joint1" value="1.04894" />
+        <joint name="joint1" value="0.7984" />
         <joint name="joint2" value="0.633555" />
         <joint name="joint3" value="1.30027" />
         <joint name="joint4" value="-0.015708" />
@@ -126,6 +126,7 @@
     <disable_collisions link1="link3" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link4" link2="link5" reason="Adjacent" />
     <disable_collisions link1="link4" link2="link6" reason="Never" />
+    <disable_collisions link1="link4" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link5" link2="link6" reason="Adjacent" />
     <disable_collisions link1="link5" link2="uflite_gripper_link" reason="Never" />
     <disable_collisions link1="link6" link2="uflite_gripper_link" reason="Adjacent" />

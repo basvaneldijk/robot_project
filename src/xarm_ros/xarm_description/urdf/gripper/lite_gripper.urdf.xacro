@@ -20,13 +20,13 @@
       </inertial>
       <xacro:common_link_visual 
         mesh_filename="gripper/lite/visual/gripper_lite"  
-        origin_xyz="0.12 0.096 -0.015" 
-        origin_rpy="0 0 3.14"
+        origin_xyz="-0.12 -0.038 0" 
+        origin_rpy="0 0 0"
         material_name="${prefix}White" />
       <xacro:common_link_collision 
         mesh_filename="gripper/lite/collision/gripper_lite"  
-        origin_xyz="0.12 0.096 -0.015" 
-        origin_rpy="0 0 3.14" />
+        origin_xyz="-0.12 -0.038 0" 
+        origin_rpy="0 0 0" />
     </link>
 
     <link name="${prefix}link_tcp" />

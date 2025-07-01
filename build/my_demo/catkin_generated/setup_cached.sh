@@ -11,5 +11,6 @@ export CMAKE_PREFIX_PATH="/home/student/Git-projects/robot_project/devel/.privat
 export LD_LIBRARY_PATH="/home/student/Git-projects/robot_project/devel/.private/my_demo/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/student/Git-projects/robot_project/devel/.private/my_demo/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/student/Git-projects/robot_project/build/my_demo'
+export PYTHONPATH="/home/student/Git-projects/robot_project/devel/.private/my_demo/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/student/Git-projects/robot_project/devel/.private/my_demo/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/student/Git-projects/robot_project/src/my_xarm_lite6/my_demo:$ROS_PACKAGE_PATH"

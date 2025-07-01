@@ -366,6 +366,9 @@ message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 
+//The directory containing a CMake configuration file for moveit_commander.
+moveit_commander_DIR:PATH=/opt/ros/melodic/share/moveit_commander/cmake
+
 //Value Computed by CMake
 my_demo_BINARY_DIR:STATIC=/home/student/Git-projects/robot_project/build/my_demo
 
