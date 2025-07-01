@@ -17,8 +17,7 @@ class MainController:
         rospy.Subscriber('/hmi_commands', String, self.hmi_callback)
         rospy.Subscriber('/kwast_detected', Bool, self.kwast_callback)
         rospy.Subscriber('/kwast_type', String, self.type_callback)
-        rospy.Subscriber('/carousel_ready', Bool, self.carousel_ready_callback)
-        rospy.Subscriber('/object_ready', Bool, self.object_ready_callback)
+        rospy.Subscriber('/carousel_status', String, self.carousel_ready_callback)
 
         # Publishers
         self.start_detectie_pub = rospy.Publisher('/start_detectie', Empty, queue_size=1)
@@ -57,14 +56,11 @@ class MainController:
             self.carousel_pub.publish("home")
 
     def carousel_ready_callback(self, msg):
-        self.carousel_ready = msg.data
-        if msg.data:
+        if msg.data.strip().lower() == "carousel_ready":
+            self.carousel_ready = True
             rospy.loginfo("MainController: Carrousel is klaar.")
-
-    def object_ready_callback(self, msg):
-        self.object_ready = msg.data
-        if msg.data:
-            rospy.loginfo("MainController: Object ligt klaar.")
+        else:
+            self.carousel_ready = False
 
     def kwast_callback(self, msg):
         self.kwast_detected = msg.data
