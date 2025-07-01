@@ -1,0 +1,8 @@
+prefix=/home/student/Git-projects/robot_project/devel/.private/carousel_control
+
+Name: carousel_control
+Description: Description of carousel_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/student/Git-projects/robot_project/devel/.private/d435i_xarm_setup:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/student/Git-projects/robot_project/devel/.private/d435i_xarm_setup/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/student/Git-projects/robot_project/devel/.private/d435i_xarm_setup/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/student/Git-projects/robot_project/build/d435i_xarm_setup'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/student/Git-projects/robot_project/devel/.private/d435i_xarm_setup/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/student/Git-projects/robot_project/src/xarm_ros/xarm_vision/d435i_xarm_setup:$ROS_PACKAGE_PATH"

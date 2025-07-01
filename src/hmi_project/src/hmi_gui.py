@@ -73,8 +73,8 @@ class HMIApp:
         state = self.state_machine.get_state()
 
         if state == "standby":
-            self.single_btn.config(state='normal')
-            self.cyclus_btn.config(state='normal')
+            self.single_btn.config(state='disabled')
+            self.cyclus_btn.config(state='disabled')
             self.stop_btn.config(state='disabled')
             self.noodstop_btn.config(state='normal')
             self.reset_btn.config(state='disabled')

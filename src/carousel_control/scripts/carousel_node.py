@@ -18,7 +18,7 @@ class CarouselController:
             exit(1)
 
         # Subscriber voor commando's
-        rospy.Subscriber('/carousel_command', String, self.command_callback)
+        rospy.Subscriber('/hmi_commands', String, self.command_callback)
 
         # Publisher voor status (optioneel)
         self.status_pub = rospy.Publisher('/carousel_status', String, queue_size=10)
@@ -29,8 +29,8 @@ class CarouselController:
         cmd = msg.data.strip().lower()
         rospy.loginfo("Ontvangen commando: {}".format(cmd))
         try:
-            # Python 2: encode naar bytes-string voor serial write
             self.serial.write(cmd + "\n")
+            rospy.loginfo("Verzend commando: {}".format(cmd))
         except Exception as e:
             rospy.logerr("Fout bij schrijven naar Arduino: {}".format(e))
 

@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/student/Git-projects/robot_project/devel/.private/multi_xarm5:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/student/Git-projects/robot_project/devel/.private/multi_xarm5/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/student/Git-projects/robot_project/devel/.private/multi_xarm5/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/student/Git-projects/robot_project/build/multi_xarm5'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/student/Git-projects/robot_project/devel/.private/multi_xarm5/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/student/Git-projects/robot_project/src/xarm_ros/examples/multi_xarm5:$ROS_PACKAGE_PATH"

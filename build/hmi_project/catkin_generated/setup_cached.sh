@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/student/Git-projects/robot_project/devel/.private/hmi_project:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/student/Git-projects/robot_project/devel/.private/hmi_project/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/student/Git-projects/robot_project/devel/.private/hmi_project/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/student/Git-projects/robot_project/build/hmi_project'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/student/Git-projects/robot_project/devel/.private/hmi_project/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/student/Git-projects/robot_project/src/hmi_project:$ROS_PACKAGE_PATH"

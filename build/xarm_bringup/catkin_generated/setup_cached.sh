@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/student/Git-projects/robot_project/devel/.private/xarm_bringup:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/student/Git-projects/robot_project/build/xarm_bringup'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/student/Git-projects/robot_project/devel/.private/xarm_bringup/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/student/Git-projects/robot_project/src/xarm_ros/xarm_bringup:$ROS_PACKAGE_PATH"

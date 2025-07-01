@@ -1,0 +1,5 @@
+carousel_control
+/home/student/Git-projects/robot_project/devel/.private/carousel_control/cmake.lock /home/student/Git-projects/robot_project/devel/./cmake.lock
+/home/student/Git-projects/robot_project/devel/.private/carousel_control/lib/pkgconfig/carousel_control.pc /home/student/Git-projects/robot_project/devel/lib/pkgconfig/carousel_control.pc
+/home/student/Git-projects/robot_project/devel/.private/carousel_control/share/carousel_control/cmake/carousel_controlConfig-version.cmake /home/student/Git-projects/robot_project/devel/share/carousel_control/cmake/carousel_controlConfig-version.cmake
+/home/student/Git-projects/robot_project/devel/.private/carousel_control/share/carousel_control/cmake/carousel_controlConfig.cmake /home/student/Git-projects/robot_project/devel/share/carousel_control/cmake/carousel_controlConfig.cmake

@@ -1,7 +1,7 @@
 # Bevat alle vaste commando's als constanten
 
 SINGLE_START = "single_start"
-CYCLUS_START = "cyclus_start"
+CYCLUS_START = "start_cyclus"
 HOME = "home"
 STOP = "stop"
 NOODSTOP = "noodstop"

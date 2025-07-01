@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/carousel_control/share/carousel_control/cmake/carousel_controlConfig.cmake
