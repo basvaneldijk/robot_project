@@ -16,6 +16,15 @@ find_package(catkin REQUIRED)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
+find_package(catkin REQUIRED COMPONENTS
+  rospy
+  std_msgs
+  geometry_msgs
+  actionlib
+  actionlib_msgs
+  moveit_commander
+  message_generation
+)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -46,6 +55,23 @@ find_package(catkin REQUIRED)
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
+add_action_files(
+  FILES
+  BrushPose.action
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+  actionlib_msgs
+)
+
+add_dependencies(${PROJECT_NAME}_generate_messages
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
@@ -72,6 +98,10 @@ find_package(catkin REQUIRED)
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
 # )
+
+catkin_package(
+  CATKIN_DEPENDS rospy std_msgs geometry_msgs actionlib_msgs message_runtime
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##

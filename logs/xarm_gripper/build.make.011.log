@@ -50,53 +50,11 @@
 [  0%] Built target control_msgs_generate_messages_cpp
 [  0%] Built target xarm_msgs_generate_messages_cpp
 [  0%] Built target geometry_msgs_generate_messages_lisp
-[  2%] [34m[1mGenerating Python from MSG xarm_gripper/MoveResult[0m
-[  4%] [34m[1mGenerating Python from MSG xarm_gripper/MoveActionResult[0m
-[  7%] [34m[1mGenerating Python from MSG xarm_gripper/MoveAction[0m
-[  9%] [34m[1mGenerating Python from MSG xarm_gripper/MoveGoal[0m
-[ 12%] [34m[1mGenerating Python from MSG xarm_gripper/MoveActionFeedback[0m
-[ 14%] [34m[1mGenerating Python from MSG xarm_gripper/MoveFeedback[0m
-[ 17%] [34m[1mGenerating Python from MSG xarm_gripper/MoveActionGoal[0m
-[ 19%] [34m[1mGenerating Python msg __init__.py for xarm_gripper[0m
 [ 19%] Built target xarm_gripper_generate_messages_py
-[ 21%] [34m[1mGenerating Javascript code from xarm_gripper/MoveResult.msg[0m
-[ 24%] [34m[1mGenerating Javascript code from xarm_gripper/MoveActionResult.msg[0m
-[ 26%] [34m[1mGenerating Javascript code from xarm_gripper/MoveAction.msg[0m
-[ 29%] [34m[1mGenerating Javascript code from xarm_gripper/MoveGoal.msg[0m
-[ 31%] [34m[1mGenerating Javascript code from xarm_gripper/MoveActionFeedback.msg[0m
-[ 34%] [34m[1mGenerating Javascript code from xarm_gripper/MoveFeedback.msg[0m
-[ 36%] [34m[1mGenerating Javascript code from xarm_gripper/MoveActionGoal.msg[0m
 [ 36%] Built target xarm_gripper_generate_messages_nodejs
-[ 39%] [34m[1mGenerating Lisp code from xarm_gripper/MoveResult.msg[0m
-[ 41%] [34m[1mGenerating Lisp code from xarm_gripper/MoveActionResult.msg[0m
-[ 43%] [34m[1mGenerating Lisp code from xarm_gripper/MoveAction.msg[0m
-[ 46%] [34m[1mGenerating Lisp code from xarm_gripper/MoveGoal.msg[0m
-[ 48%] [34m[1mGenerating Lisp code from xarm_gripper/MoveActionFeedback.msg[0m
-[ 51%] [34m[1mGenerating Lisp code from xarm_gripper/MoveFeedback.msg[0m
-[ 53%] [34m[1mGenerating Lisp code from xarm_gripper/MoveActionGoal.msg[0m
 [ 53%] Built target xarm_gripper_generate_messages_lisp
-[ 56%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveResult.msg[0m
-[ 58%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveActionResult.msg[0m
-[ 60%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveAction.msg[0m
-[ 63%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveGoal.msg[0m
-[ 65%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveActionFeedback.msg[0m
-[ 68%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveFeedback.msg[0m
-[ 70%] [34m[1mGenerating EusLisp code from xarm_gripper/MoveActionGoal.msg[0m
 [ 73%] Built target xarm_gripper_generate_messages_eus
-[ 75%] [34m[1mGenerating C++ code from xarm_gripper/MoveResult.msg[0m
-[ 78%] [34m[1mGenerating C++ code from xarm_gripper/MoveActionResult.msg[0m
-[ 80%] [34m[1mGenerating C++ code from xarm_gripper/MoveAction.msg[0m
-[ 82%] [34m[1mGenerating C++ code from xarm_gripper/MoveGoal.msg[0m
-[ 85%] [34m[1mGenerating C++ code from xarm_gripper/MoveActionFeedback.msg[0m
-[ 87%] [34m[1mGenerating C++ code from xarm_gripper/MoveFeedback.msg[0m
-[ 90%] [34m[1mGenerating C++ code from xarm_gripper/MoveActionGoal.msg[0m
 [ 90%] Built target xarm_gripper_generate_messages_cpp
-[35m[1mScanning dependencies of target gripper_client[0m
-[ 92%] [32mBuilding CXX object CMakeFiles/gripper_client.dir/src/gripper_client.cpp.o[0m
-[ 95%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/xarm_gripper/lib/xarm_gripper/gripper_client[0m
 [ 95%] Built target gripper_client
-[35m[1mScanning dependencies of target gripper_action_server[0m
-[ 97%] [32mBuilding CXX object CMakeFiles/gripper_action_server.dir/src/gripper_action_server.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/xarm_gripper/lib/xarm_gripper/gripper_action_server[0m
 [100%] Built target gripper_action_server
 [100%] Built target xarm_gripper_generate_messages

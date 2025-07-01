@@ -3,6 +3,6 @@ prefix=/home/student/Git-projects/robot_project/devel/.private/my_demo
 Name: my_demo
 Description: Description of my_demo
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/student/Git-projects/robot_project/devel/.private/my_demo/include
 Libs: -L${prefix}/lib 
 Requires: 

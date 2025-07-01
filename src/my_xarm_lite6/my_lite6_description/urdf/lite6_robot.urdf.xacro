@@ -176,6 +176,35 @@
   <xacro:include filename="$(find xarm_description)/urdf/gripper/lite_gripper.urdf.xacro" />
   <xacro:uflite_gripper_urdf prefix="$(arg prefix)" attach_to='link_eef' />
 
+
+<!-- Gripper Link 
+<link name="gripper_link">
+  <visual>
+    <origin xyz="-0.1026 -0.0806 -0.04175" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_lite6_description/meshes/gripper.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+  <collision>
+  <origin xyz="-0.1026 -0.0846 -0.04175" rpy="0 0 0"/>
+  <geometry>
+    <mesh filename="package://my_lite6_description/meshes/gripper.stl" scale="0.001 0.001 0.001"/>
+  </geometry>
+</collision>
+  <inertial>
+    <mass value="0.1"/>
+    <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+</link>  
+
+
+<joint name="gripper_joint" type="fixed">
+  <parent link="link_eef"/>
+  <child link="gripper_link"/>
+  <origin xyz="0 0 0" rpy="-1.5708 0 0"/> 
+</joint>
+-->
 <!-- Include jouw eigen robotopstelling -->
 <xacro:include filename="$(find my_lite6_description)/urdf/robotopstelling.urdf.xacro" />
 <xacro:robotopstelling/>

@@ -129,7 +129,74 @@ file(INSTALL DESTINATION "/home/student/Git-projects/robot_project/install" TYPE
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/action" TYPE FILE FILES "/home/student/Git-projects/robot_project/src/my_xarm_lite6/my_demo/action/BrushPose.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/msg" TYPE FILE FILES
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseAction.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseActionGoal.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseActionResult.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseActionFeedback.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseGoal.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseResult.msg"
+    "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/my_demo/msg/BrushPoseFeedback.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/cmake" TYPE FILE FILES "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demo-msg-paths.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/student/Git-projects/robot_project/devel/.private/my_demo/include/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/roseus/ros/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/common-lisp/ros/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/student/Git-projects/robot_project/devel/.private/my_demo/share/gennodejs/ros/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/student/Git-projects/robot_project/devel/.private/my_demo/lib/python2.7/dist-packages/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/student/Git-projects/robot_project/devel/.private/my_demo/lib/python2.7/dist-packages/my_demo")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demo.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/cmake" TYPE FILE FILES "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demo-msg-extras.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/cmake" TYPE FILE FILES
+    "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demoConfig.cmake"
+    "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demoConfig-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo" TYPE FILE FILES "/home/student/Git-projects/robot_project/src/my_xarm_lite6/my_demo/package.xml")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demo.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_demo/cmake" TYPE FILE FILES "/home/student/Git-projects/robot_project/build/my_demo/catkin_generated/installspace/my_demo-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

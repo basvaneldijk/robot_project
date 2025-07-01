@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/my_demo/share/gennodejs/ros/my_demo/_index.js
