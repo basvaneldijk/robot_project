@@ -93,7 +93,7 @@ def get_pose_from_camera(host="127.0.0.1", port=5050):
 
         # Testdata handmatig invullen (in meters en radialen!)
         x = 0.078
-        y = -0.025
+        y = -0.021
         z = 0.3
         rx = 3.14
         ry = 0.0

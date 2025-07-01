@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String, Bool, Empty
+from robot_controller import RobotController, get_pose_from_camera
 
 class MainController:
     def __init__(self):
@@ -23,7 +24,7 @@ class MainController:
         self.start_detectie_pub = rospy.Publisher('/start_detectie', Empty, queue_size=1)
         self.robot_pub = rospy.Publisher('/move_to_bin', String, queue_size=1)
         self.carousel_pub = rospy.Publisher('/carousel_command', String, queue_size=1)
-
+        
         rospy.loginfo("Main controller actief")
         self.loop()
 
@@ -51,9 +52,11 @@ class MainController:
             self.carousel_ready = False
             self.object_ready = False
             self.carousel_pub.publish("home")
+            self.robot_pub.publish("home")
         elif cmd == "home":
             self.mode = "home"
             self.carousel_pub.publish("home")
+            self.robot_pub.publish("home")
 
     def carousel_ready_callback(self, msg):
         if msg.data.strip().lower() == "carousel_ready":
