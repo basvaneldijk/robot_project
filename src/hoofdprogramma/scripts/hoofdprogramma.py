@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 import rospy
+import json
 from std_msgs.msg import String, Bool, Empty
-from robot_controller import RobotController, get_pose_from_camera
+from robot_controller import get_pose_from_camera  # Alleen deze nog nodig
 
 class MainController:
-    def __init__(self):
+    def _init_(self):
         rospy.init_node('main_controller')
 
         # interne toestand
@@ -22,9 +23,9 @@ class MainController:
 
         # Publishers
         self.start_detectie_pub = rospy.Publisher('/start_detectie', Empty, queue_size=1)
-        self.robot_pub = rospy.Publisher('/move_to_bin', String, queue_size=1)
+        self.robot_pub = rospy.Publisher('/kwast_data', String, queue_size=1)  # <-- aangepast
         self.carousel_pub = rospy.Publisher('/carousel_command', String, queue_size=1)
-        
+
         rospy.loginfo("Main controller actief")
         self.loop()
 
@@ -34,33 +35,33 @@ class MainController:
         if cmd == "single_start":
             self.mode = "run"
             self.cyclus_mode = False
-            self.carousel_pub.publish("single_start")
+            self.carousel_pub.publish(String(data="single_start"))
         elif cmd == "start_cyclus":
             self.mode = "run"
             self.cyclus_mode = True
-            self.carousel_pub.publish("auto_start")
+            self.carousel_pub.publish(String(data="auto_start"))
         elif cmd == "stop":
             self.mode = "stop"
-            self.carousel_pub.publish("stop")
+            self.carousel_pub.publish(String(data="stop"))
         elif cmd == "noodstop":
             self.mode = "noodstop"
-            self.carousel_pub.publish("noodstop")
+            self.carousel_pub.publish(String(data="noodstop"))
         elif cmd == "reset":
             self.mode = None
             self.tafel_ready = False
             self.kwast_detected = False
             self.carousel_ready = False
             self.object_ready = False
-            self.carousel_pub.publish("home")
-            self.robot_pub.publish("home")
+            self.carousel_pub.publish(String(data="home"))
+            
         elif cmd == "home":
             self.mode = "home"
-            self.carousel_pub.publish("home")
-            self.robot_pub.publish("home")
+            self.carousel_pub.publish(String(data="home"))
+            
 
     def carousel_ready_callback(self, msg):
         if msg.data.strip().lower() == "carousel_ready":
-            self.carousel_ready = True
+            self.carousel_ready = False
             rospy.loginfo("MainController: Carrousel is klaar.")
         else:
             self.carousel_ready = False
@@ -70,26 +71,32 @@ class MainController:
 
     def type_callback(self, msg):
         if self.mode in ["run"]:
-            kwast_type = msg.data
+            kwast_type = msg.data.strip().lower()
             rospy.loginfo("Kwast gedetecteerd: " + kwast_type)
 
-            # bepaal juiste bak
-            bak_mapping = {
-                "dik": "bak1",
-                "dun": "bak2",
-                "penseel": "bak3",
-                "rubber": "bak4"
+            # Haal pose van camera (of fallback pose)
+            pose = get_pose_from_camera()
+
+            data = {
+                "x": pose.position.x,
+                "y": pose.position.y,
+                "z": pose.position.z,
+                "rx": 3.14,
+                "ry": 0.0,
+                "rz": 1.57,
+                "type": kwast_type
             }
-            bak = bak_mapping.get(kwast_type, "bak_onbekend")
-            self.robot_pub.publish(bak)
-            rospy.loginfo("Stuur robot naar: " + bak)
+
+            msg_out = String()
+            msg_out.data = json.dumps(data)
+            self.robot_pub.publish(msg_out)
+            rospy.loginfo("Pose + type gestuurd naar robot: %s" % msg_out.data)
 
             if self.cyclus_mode:
-                # wacht even en begin opnieuw
                 rospy.sleep(2)
                 self.mode = "run"
             else:
-                self.mode = None  # klaar met single run
+                self.mode = None
 
     def loop(self):
         rate = rospy.Rate(10)
@@ -104,7 +111,7 @@ class MainController:
                 self.mode = None
             elif self.mode == "noodstop":
                 rospy.logwarn("!!! Noodstop geactiveerd !!!")
-                break  # verlaat programma of stuur stop naar alle nodes
+                break
             rate.sleep()
 
 if __name__ == '__main__':
@@ -112,4 +119,3 @@ if __name__ == '__main__':
         MainController()
     except rospy.ROSInterruptException:
         pass
-

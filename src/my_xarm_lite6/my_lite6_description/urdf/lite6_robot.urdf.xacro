@@ -176,7 +176,7 @@
   <xacro:include filename="$(find xarm_description)/urdf/gripper/lite_gripper.urdf.xacro" />
   <xacro:uflite_gripper_urdf prefix="$(arg prefix)" attach_to='link_eef' />
 
-<!-- Include jouw eigen robotopstelling -->
+<!-- Robot opstelling -->
 <xacro:include filename="$(find my_lite6_description)/urdf/robotopstelling.urdf.xacro" />
 <xacro:robotopstelling/>
 

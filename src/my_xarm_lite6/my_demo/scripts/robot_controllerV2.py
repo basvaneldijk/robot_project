@@ -44,25 +44,24 @@ class RobotController(object):
             return False
 
         # Verlaag de pose met 3 cm
-        lowered_pose = Pose()
-        lowered_pose.position.x = pose.position.x
-        lowered_pose.position.y = pose.position.y
-        lowered_pose.position.z = pose.position.z - descend_distance
-        lowered_pose.orientation = pose.orientation
+        ##lowered_pose.position.x = pose.position.x
+        #lowered_pose.position.y = pose.position.y
+        #lowered_pose.position.z = pose.position.z - descend_distance
+        #lowered_pose.orientation = pose.orientation
 
         # Beweeg naar verlaagde pose
-        if not self.move_to_pose(lowered_pose):
-            rospy.logwarn("Kan niet naar verlaagde pick-pose bewegen")
-            return False
+        #if not self.move_to_pose(lowered_pose):
+        #    rospy.logwarn("Kan niet naar verlaagde pick-pose bewegen")
+        #    return False
 
         # Sluit gripper
         rospy.sleep(1.0)
         self.gripper_off()
 
         # Ga terug naar originele hoogte
-        if not self.move_to_pose(pose):
-            rospy.logwarn("Kan niet terug omhoog bewegen na pick")
-            return False
+        #if not self.move_to_pose(pose):
+          #  rospy.logwarn("Kan niet terug omhoog bewegen na pick")
+          #  return False
 
         rospy.loginfo("Pick-operatie voltooid")
         return True
@@ -93,8 +92,8 @@ def get_pose_from_camera(host="127.0.0.1", port=5050):
 
         # Testdata handmatig invullen (in meters en radialen!)
         x = 0.078
-        y = -0.021
-        z = 0.3
+        y = -0.035
+        z = 0.268
         rx = 3.14
         ry = 0.0
         rz = 1.57
