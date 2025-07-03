@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/__init__.py

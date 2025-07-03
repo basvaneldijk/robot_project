@@ -1,0 +1,9 @@
+# Goal
+geometry_msgs/Pose target_pose
+string kwast_type
+---
+# Result
+bool success
+---
+# Feedback
+string status

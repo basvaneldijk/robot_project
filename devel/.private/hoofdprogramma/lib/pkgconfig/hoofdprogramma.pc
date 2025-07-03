@@ -2,7 +2,7 @@ prefix=/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma
 
 Name: hoofdprogramma
 Description: Description of hoofdprogramma
-Version: 0.0.0
-Cflags: 
+Version: 0.0.1
+Cflags: -I/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: message_runtime std_msgs geometry_msgs actionlib_msgs

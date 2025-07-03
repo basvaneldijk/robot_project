@@ -1,0 +1,1 @@
+/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.js

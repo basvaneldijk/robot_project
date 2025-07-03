@@ -56,6 +56,28 @@ CMAKE_BINARY_DIR = /home/student/Git-projects/robot_project/build/hoofdprogramma
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -90,29 +112,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -125,15 +124,16 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,108 +168,225 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named clean_test_results
+# Target rules for targets named hoofdprogramma_genpy
 
 # Build rule for target.
-clean_test_results: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
-.PHONY : clean_test_results
+hoofdprogramma_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_genpy
+.PHONY : hoofdprogramma_genpy
 
 # fast build rule for target.
-clean_test_results/fast:
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-.PHONY : clean_test_results/fast
+hoofdprogramma_genpy/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_genpy.dir/build.make CMakeFiles/hoofdprogramma_genpy.dir/build
+.PHONY : hoofdprogramma_genpy/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
+# Target rules for targets named hoofdprogramma_generate_messages_nodejs
 
 # Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
+hoofdprogramma_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages_nodejs
+.PHONY : hoofdprogramma_generate_messages_nodejs
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+hoofdprogramma_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages_nodejs.dir/build.make CMakeFiles/hoofdprogramma_generate_messages_nodejs.dir/build
+.PHONY : hoofdprogramma_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named run_tests
+# Target rules for targets named hoofdprogramma_generate_messages_lisp
 
 # Build rule for target.
-run_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests
-.PHONY : run_tests
+hoofdprogramma_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages_lisp
+.PHONY : hoofdprogramma_generate_messages_lisp
 
 # fast build rule for target.
-run_tests/fast:
-	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
+hoofdprogramma_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages_lisp.dir/build.make CMakeFiles/hoofdprogramma_generate_messages_lisp.dir/build
+.PHONY : hoofdprogramma_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named download_extra_data
+# Target rules for targets named hoofdprogramma_gencpp
 
 # Build rule for target.
-download_extra_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
-.PHONY : download_extra_data
+hoofdprogramma_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_gencpp
+.PHONY : hoofdprogramma_gencpp
 
 # fast build rule for target.
-download_extra_data/fast:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
+hoofdprogramma_gencpp/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_gencpp.dir/build.make CMakeFiles/hoofdprogramma_gencpp.dir/build
+.PHONY : hoofdprogramma_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
+# Target rules for targets named hoofdprogramma_generate_messages_cpp
 
 # Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
+hoofdprogramma_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages_cpp
+.PHONY : hoofdprogramma_generate_messages_cpp
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+hoofdprogramma_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages_cpp.dir/build.make CMakeFiles/hoofdprogramma_generate_messages_cpp.dir/build
+.PHONY : hoofdprogramma_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named tests
+# Target rules for targets named hoofdprogramma_geneus
 
 # Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
+hoofdprogramma_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_geneus
+.PHONY : hoofdprogramma_geneus
 
 # fast build rule for target.
-tests/fast:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-.PHONY : tests/fast
+hoofdprogramma_geneus/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_geneus.dir/build.make CMakeFiles/hoofdprogramma_geneus.dir/build
+.PHONY : hoofdprogramma_geneus/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction
 
 # Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback
 
 # Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_KwastDetection
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_KwastDetection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_KwastDetection
+.PHONY : _hoofdprogramma_generate_messages_check_deps_KwastDetection
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_KwastDetection/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_KwastDetection.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_KwastDetection.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_KwastDetection/fast
+
+#=============================================================================
+# Target rules for targets named hoofdprogramma_generate_messages_eus
+
+# Build rule for target.
+hoofdprogramma_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages_eus
+.PHONY : hoofdprogramma_generate_messages_eus
+
+# fast build rule for target.
+hoofdprogramma_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages_eus.dir/build.make CMakeFiles/hoofdprogramma_generate_messages_eus.dir/build
+.PHONY : hoofdprogramma_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal/fast
+
+#=============================================================================
+# Target rules for targets named hoofdprogramma_genlisp
+
+# Build rule for target.
+hoofdprogramma_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_genlisp
+.PHONY : hoofdprogramma_genlisp
+
+# fast build rule for target.
+hoofdprogramma_genlisp/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_genlisp.dir/build.make CMakeFiles/hoofdprogramma_genlisp.dir/build
+.PHONY : hoofdprogramma_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
@@ -285,6 +402,214 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named hoofdprogramma_gennodejs
+
+# Build rule for target.
+hoofdprogramma_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_gennodejs
+.PHONY : hoofdprogramma_gennodejs
+
+# fast build rule for target.
+hoofdprogramma_gennodejs/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_gennodejs.dir/build.make CMakeFiles/hoofdprogramma_gennodejs.dir/build
+.PHONY : hoofdprogramma_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_cpp
+
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named download_extra_data
+
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_nodejs
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named doxygen
 
 # Build rule for target.
@@ -296,6 +621,253 @@ doxygen: cmake_check_build_system
 doxygen/fast:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results
+
+# Build rule for target.
+clean_test_results: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
+.PHONY : clean_test_results
+
+# fast build rule for target.
+clean_test_results/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_eus
+
+# Build rule for target.
+actionlib_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_eus
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_eus.dir/build.make CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named hoofdprogramma_generate_messages_py
+
+# Build rule for target.
+hoofdprogramma_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages_py
+.PHONY : hoofdprogramma_generate_messages_py
+
+# fast build rule for target.
+hoofdprogramma_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages_py.dir/build.make CMakeFiles/hoofdprogramma_generate_messages_py.dir/build
+.PHONY : hoofdprogramma_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_lisp
+
+# Build rule for target.
+actionlib_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_py
+
+# Build rule for target.
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_py.dir/build.make CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult
+
+# Build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult
+
+# fast build rule for target.
+_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult/fast:
+	$(MAKE) -f CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult.dir/build.make CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult.dir/build
+.PHONY : _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_cpp
+
+# Build rule for target.
+actionlib_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_cpp
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_eus
+
+# Build rule for target.
+actionlib_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_eus
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_lisp
+
+# Build rule for target.
+actionlib_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_lisp
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_py
+
+# Build rule for target.
+actionlib_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_py
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named hoofdprogramma_generate_messages
+
+# Build rule for target.
+hoofdprogramma_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hoofdprogramma_generate_messages
+.PHONY : hoofdprogramma_generate_messages
+
+# fast build rule for target.
+hoofdprogramma_generate_messages/fast:
+	$(MAKE) -f CMakeFiles/hoofdprogramma_generate_messages.dir/build.make CMakeFiles/hoofdprogramma_generate_messages.dir/build
+.PHONY : hoofdprogramma_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -355,23 +927,67 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... clean_test_results"
-	@echo "... edit_cache"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... run_tests"
-	@echo "... download_extra_data"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... rebuild_cache"
-	@echo "... tests"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... doxygen"
-	@echo "... install/local"
 	@echo "... list_install_components"
+	@echo "... hoofdprogramma_genpy"
+	@echo "... hoofdprogramma_generate_messages_nodejs"
+	@echo "... hoofdprogramma_generate_messages_lisp"
+	@echo "... install/strip"
+	@echo "... hoofdprogramma_gencpp"
+	@echo "... hoofdprogramma_generate_messages_cpp"
+	@echo "... hoofdprogramma_geneus"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceAction"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceFeedback"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_KwastDetection"
+	@echo "... edit_cache"
+	@echo "... hoofdprogramma_generate_messages_eus"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionGoal"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal"
+	@echo "... hoofdprogramma_genlisp"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionFeedback"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceResult"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... hoofdprogramma_gennodejs"
+	@echo "... tests"
+	@echo "... rebuild_cache"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... download_extra_data"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... run_tests"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... install/local"
+	@echo "... doxygen"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... clean_test_results"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... hoofdprogramma_generate_messages_py"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... test"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... _hoofdprogramma_generate_messages_check_deps_PickAndPlaceActionResult"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... hoofdprogramma_generate_messages"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

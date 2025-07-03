@@ -17,40 +17,33 @@ class HMIApp:
         rospy.Subscriber('/status_light', String, self.update_lights)
 
         # Interne status
-        self.state = "standby"
+        self.state = "startup"  # eerste keer opstarten in 'startup'
 
         # Frame voor knoppen
-	self.button_frame = tk.Frame(master, bg="#dcdcdc")
-	self.button_frame.pack(pady=10)
+        self.button_frame = tk.Frame(master, bg="#dcdcdc")
+        self.button_frame.pack(pady=10)
 
-	# Rij 0: Single Start en Cyclus Start naast elkaar
-	self.single_btn = tk.Button(self.button_frame, text="Single Start", width=12, command=lambda: self.send_command("single_start"))
-	self.single_btn.grid(row=0, column=0, padx=5, pady=5)
+        self.single_btn = tk.Button(self.button_frame, text="Single Start", width=12, command=lambda: self.send_command("single_start"))
+        self.single_btn.grid(row=0, column=0, padx=5, pady=5)
 
-	self.cyclus_btn = tk.Button(self.button_frame, text="Cyclus Start", width=12, command=lambda: self.send_command("cyclus_start"))
-	self.cyclus_btn.grid(row=0, column=1, padx=5, pady=5)
+        self.cyclus_btn = tk.Button(self.button_frame, text="Cyclus Start", width=12, command=lambda: self.send_command("start_cyclus"))
+        self.cyclus_btn.grid(row=0, column=1, padx=5, pady=5)
 
-	# Rij 1: Home knop over beide kolommen
-	self.home_btn = tk.Button(self.button_frame, text="Home", width=26, command=lambda: self.send_command("home"))
-	self.home_btn.grid(row=1, column=0, columnspan=2, pady=5)
+        self.home_btn = tk.Button(self.button_frame, text="Home", width=26, command=self.home_procedure)
+        self.home_btn.grid(row=1, column=0, columnspan=2, pady=5)
 
-	# Rij 2: Stop
-	self.stop_btn = tk.Button(self.button_frame, text="Stop", width=26, command=lambda: self.send_command("stop"))
-	self.stop_btn.grid(row=2, column=0, columnspan=2, pady=5)
+        self.stop_btn = tk.Button(self.button_frame, text="Stop", width=26, command=lambda: self.send_command("stop"))
+        self.stop_btn.grid(row=2, column=0, columnspan=2, pady=5)
 
-	# Rij 3: Reset
-	self.reset_btn = tk.Button(self.button_frame, text="Reset", width=26, command=self.reset)
-	self.reset_btn.grid(row=3, column=0, columnspan=2, pady=5)
+        self.reset_btn = tk.Button(self.button_frame, text="Reset", width=26, command=self.reset)
+        self.reset_btn.grid(row=3, column=0, columnspan=2, pady=5)
 
-	# Rij 4: Noodstop
-	self.noodstop_btn = tk.Button(self.button_frame, text="Noodstop", width=26, bg="red", fg="white", command=lambda: self.send_command("noodstop"))
-	self.noodstop_btn.grid(row=4, column=0, columnspan=2, pady=5)
+        self.noodstop_btn = tk.Button(self.button_frame, text="Noodstop", width=26, bg="red", fg="white", command=lambda: self.send_command("noodstop"))
+        self.noodstop_btn.grid(row=4, column=0, columnspan=2, pady=5)
 
-        # Lampjes label
         self.status_label = tk.Label(master, text="Statuslampjes:", font=("Arial", 12))
         self.status_label.pack(pady=10)
 
-        # Lampjes op HMI
         self.green_light = tk.Label(master, text="Wacht op start", bg="gray", width=15, height=2)
         self.green_light.pack(pady=2)
 
@@ -60,14 +53,11 @@ class HMIApp:
         self.red_light = tk.Label(master, text="Fout", bg="gray", width=15, height=2)
         self.red_light.pack(pady=2)
 
-	self.blue_light = tk.Label(master, text="Homing", bg="gray", width=15, height=2)
+        self.blue_light = tk.Label(master, text="Homing", bg="gray", width=15, height=2)
         self.blue_light.pack(pady=2)
 
-        # Initialiseer GUI status
         self.update_buttons()
-        if self.state == "standby":
-            self.set_all_lights("gray")
-            self.green_light.config(bg="green")
+        self.set_all_lights("gray")
 
         self.master.after(100, self.ros_spin)
 
@@ -79,18 +69,33 @@ class HMIApp:
             self.state = "single_active"
             self.set_all_lights("gray")
             self.orange_light.config(bg="orange")
-        elif cmd == "cyclus_start":
+        elif cmd == "start_cyclus":
             self.state = "cyclus_active"
             self.set_all_lights("gray")
             self.orange_light.config(bg="orange")
         elif cmd == "stop" or cmd == "noodstop":
             self.state = "vergrendeld"
             self.set_all_lights("gray")
-        elif cmd == "home":
-            self.state = "home"
-            self.set_all_lights("gray")
-            self.green_light.config(bg="green")  # Pas eventueel aan
 
+        self.update_buttons()
+
+    def home_procedure(self):
+        rospy.loginfo("Start homing...")
+        self.command_pub.publish(String("home"))
+        self.state = "home"
+        self.set_all_lights("gray")
+        self.blue_light.config(bg="blue")
+
+        # Wacht even, dan direct naar standby
+        self.master.after(2000, self.enter_standby)
+
+        self.update_buttons()
+
+    def enter_standby(self):
+        rospy.loginfo("Homing voltooid, ga naar standby.")
+        self.state = "standby"
+        self.set_all_lights("gray")
+        self.green_light.config(bg="green")
         self.update_buttons()
 
     def reset(self):
@@ -102,13 +107,21 @@ class HMIApp:
         self.update_buttons()
 
     def update_buttons(self):
-        if self.state == "standby":
+        if self.state == "startup":
+            self.single_btn.config(state='disabled')
+            self.cyclus_btn.config(state='disabled')
+            self.stop_btn.config(state='disabled')
+            self.noodstop_btn.config(state='normal')
+            self.reset_btn.config(state='disabled')
+            self.home_btn.config(state='normal')
+
+        elif self.state == "standby":
             self.single_btn.config(state='normal')
             self.cyclus_btn.config(state='normal')
             self.stop_btn.config(state='disabled')
             self.noodstop_btn.config(state='normal')
             self.reset_btn.config(state='disabled')
-            self.home_btn.config(state='normal')
+            self.home_btn.config(state='disabled')  # niet meer nodig
 
         elif self.state in ["single_active", "cyclus_active"]:
             self.single_btn.config(state='disabled')
@@ -131,8 +144,8 @@ class HMIApp:
             self.cyclus_btn.config(state='disabled')
             self.stop_btn.config(state='disabled')
             self.noodstop_btn.config(state='normal')
-            self.reset_btn.config(state='normal')
-            self.home_btn.config(state='normal')
+            self.reset_btn.config(state='disabled')
+            self.home_btn.config(state='disabled')
 
     def update_lights(self, msg):
         status = msg.data.lower()
@@ -146,8 +159,8 @@ class HMIApp:
             self.orange_light.config(bg="orange")
         elif status == "fout":
             self.red_light.config(bg="red")
-	elif status == "homing":
-	    self.blue_light.config(bg="blue")
+        elif status == "homing":
+            self.blue_light.config(bg="blue")
         else:
             rospy.logwarn("Onbekende status ontvangen: {}".format(status))
 
@@ -175,4 +188,3 @@ if __name__ == '__main__':
     root = tk.Tk()
     app = HMIApp(root)
     root.mainloop()
-

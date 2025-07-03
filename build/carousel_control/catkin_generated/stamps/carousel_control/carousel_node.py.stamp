@@ -25,12 +25,14 @@ class CarouselController:
 
         self.rate = rospy.Rate(10)
 
+        self.last_msg = ""  # Houdt laatst gepubliceerde bericht bij
+
     def command_callback(self, msg):
         cmd = msg.data.strip().lower()
         rospy.loginfo("Ontvangen commando: {}".format(cmd))
         try:
-            # Python 2: encode naar bytes-string voor serial write
             self.serial.write(cmd + "\n")
+            rospy.loginfo("Verzend commando: {}".format(cmd))
         except Exception as e:
             rospy.logerr("Fout bij schrijven naar Arduino: {}".format(e))
 
@@ -38,12 +40,14 @@ class CarouselController:
         try:
             line = self.serial.readline()
             if line:
-                # serial.readline() geeft bytes, decode naar unicode string (utf-8)
                 line_str = line.strip()
                 if isinstance(line_str, bytes):
                     line_str = line_str.decode('utf-8')
-                self.status_pub.publish(line_str)
-                rospy.loginfo("Status van Arduino: {}".format(line_str))
+                # Filter dubbele berichten, stuur alleen door als nieuw
+                if line_str != self.last_msg:
+                    self.status_pub.publish(line_str)
+                    rospy.loginfo("Status van Arduino: {}".format(line_str))
+                    self.last_msg = line_str
         except Exception as e:
             rospy.logwarn("Fout bij lezen van Arduino: {}".format(e))
 
