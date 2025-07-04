@@ -65,19 +65,19 @@ class CarouselController:
                     self.status_pub.publish(String(decoded))
                     rospy.loginfo("Status from Arduino: {}".format(decoded))
 
-                    # Zet state op 0 als cyclus klaar is of homing klaar is
+                    # Check op cyclus klaar of homing klaar
                     if "cycle_done" in decoded:
                         rospy.loginfo("Cyclus afgerond, terug naar standby.")
                         self.state = 0
 
-                    elif "homing klaar" in decoded:
+                    elif "Homing klaar" in decoded or "homing_done" in decoded:
                         rospy.loginfo("Homing afgerond, terug naar standby.")
                         self.state = 0
 
                 except Exception as decode_error:
                     rospy.logwarn("Decode error: {}".format(decode_error))
         except Exception as e:
-            rospy.logwarn("Read error: {}".format(e))
+            rospy.logwarn("Read error: {}".format(e))
 
     def run(self):
         while not rospy.is_shutdown():

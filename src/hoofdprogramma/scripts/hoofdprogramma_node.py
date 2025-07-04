@@ -30,7 +30,7 @@ class Hoofdprogramma(object):
         self.kwast_ontvangen = False
         self.kwast_pose = None
         self.kwast_type = ""
-        self.homing_done = False  # <-- Nieuw toegevoegd
+        self.homing_done = False  
 
         rospy.spin()
 
@@ -40,11 +40,10 @@ class Hoofdprogramma(object):
         if msg.data == "home":
             rospy.loginfo("Home-commando ontvangen. Carousel gaat naar home.")
             self.carousel_pub.publish("home")
-            self.status_pub.publish("home")
 
         elif msg.data == "single_start":
             self.start_cyclus = True
-            self.status_pub.publish("cyclus_start")
+            self.carousel_pub.publish("single_start")   
             self.start_cyclusflow()
 
     def carousel_status_cb(self, msg):
