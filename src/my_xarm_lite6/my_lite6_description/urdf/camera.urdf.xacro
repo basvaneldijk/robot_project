@@ -31,7 +31,7 @@
     <joint name="camera_to_opstelling" type="fixed">
       <parent link="world"/>
       <child link="camera_link"/>
-      <origin xyz="0.1475 0.0775 0.8475" rpy="3.14 0 -1.57"/>
+      <origin xyz="0.1475 0.0205 0.8475" rpy="3.14 0 -1.57"/>
     </joint>
 
   </xacro:macro>

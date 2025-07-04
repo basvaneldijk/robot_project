@@ -48,12 +48,27 @@
 [  0%] Built target depthai_ros_msgs_generate_messages_lisp
 [  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target depthai_ros_msgs_generate_messages_py
+[  5%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/rgb_stereo_node[0m
 [ 11%] Built target rgb_stereo_node
+[ 16%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/rgb_node[0m
 [ 22%] Built target rgb_node
+[ 27%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/mobilenet_node[0m
 [ 33%] Built target mobilenet_node
+[ 38%] [32m[1mLinking CXX shared library /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/libnodelet_stereo.so[0m
 [ 44%] Built target nodelet_stereo
+[35m[1mScanning dependencies of target stereo_inertial_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/stereo_inertial_node.dir/src/stereo_inertial_publisher.cpp.o[0m
+[ 55%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/stereo_inertial_node[0m
 [ 55%] Built target stereo_inertial_node
+[35m[1mScanning dependencies of target crop_control_service[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/crop_control_service.dir/src/crop_control_service.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/crop_control_service[0m
 [ 66%] Built target crop_control_service
+[35m[1mScanning dependencies of target yolov4_spatial_node[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/yolov4_spatial_node.dir/src/yolov4_spatial_publisher.cpp.o[0m
+[ 77%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/yolov4_spatial_node[0m
 [ 77%] Built target yolov4_spatial_node
+[ 83%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/rgb_subscriber_node[0m
 [ 88%] Built target rgb_subscriber_node
+[ 94%] [32m[1mLinking CXX executable /home/student/Git-projects/robot_project/devel/.private/depthai_examples/lib/depthai_examples/stereo_node[0m
 [100%] Built target stereo_node

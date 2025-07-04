@@ -1,67 +1,67 @@
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionGoal.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceFeedback.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceGoal.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceAction.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/KwastDetection.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionFeedback.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceResult.h
-Symlinking /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionResult.h
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/__init__.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_KwastDetection.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionGoal.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/__init__.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceAction.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionResult.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionFeedback.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceResult.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceGoal.py
-Symlinking /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceFeedback.py
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceActionGoal.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionGoal.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceFeedback.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceFeedback.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceGoal.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceGoal.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceAction.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceAction.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/KwastDetection.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/KwastDetection.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceActionFeedback.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionFeedback.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceResult.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceResult.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/include/hoofdprogramma/PickAndPlaceActionResult.h, /home/student/Git-projects/robot_project/devel/include/hoofdprogramma/PickAndPlaceActionResult.h)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/__init__.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/__init__.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_KwastDetection.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_KwastDetection.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionGoal.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionGoal.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/__init__.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/__init__.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceAction.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceAction.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionResult.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionResult.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionFeedback.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceActionFeedback.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceResult.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceResult.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceGoal.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceGoal.py)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceFeedback.py, /home/student/Git-projects/robot_project/devel/lib/python2.7/dist-packages/hoofdprogramma/msg/_PickAndPlaceFeedback.py)
 Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/lib/pkgconfig/hoofdprogramma.pc, /home/student/Git-projects/robot_project/devel/lib/pkgconfig/hoofdprogramma.pc)
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/_index.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceFeedback.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionResult.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/KwastDetection.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceGoal.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/_index.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceAction.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceResult.js
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/manifest.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceAction.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/KwastDetection.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceGoal.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionResult.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceFeedback.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceResult.l
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionResult.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceGoal.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceFeedback.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/hoofdprogramma-msg.asd
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionResult.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceAction.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_KwastDetection.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionFeedback.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceResult.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceFeedback.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionGoal.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/KwastDetection.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceGoal.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceAction.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceResult.lisp
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceResult.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceAction.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceGoal.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogramma-msg-paths.cmake
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/_index.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/_index.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceFeedback.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceFeedback.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionResult.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionResult.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/KwastDetection.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/KwastDetection.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceGoal.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceGoal.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/_index.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/_index.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceAction.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceAction.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceResult.js, /home/student/Git-projects/robot_project/devel/share/gennodejs/ros/hoofdprogramma/msg/PickAndPlaceResult.js)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/manifest.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/manifest.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceAction.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceAction.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/KwastDetection.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/KwastDetection.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceGoal.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceGoal.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionResult.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceActionResult.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceFeedback.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceFeedback.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceResult.l, /home/student/Git-projects/robot_project/devel/share/roseus/ros/hoofdprogramma/msg/PickAndPlaceResult.l)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionResult.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionResult.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionGoal.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceGoal.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceGoal.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceFeedback.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceFeedback.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/hoofdprogramma-msg.asd, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/hoofdprogramma-msg.asd)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionFeedback.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionResult.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceActionResult.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceAction.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceAction.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_KwastDetection.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_KwastDetection.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionFeedback.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionFeedback.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceResult.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceResult.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceFeedback.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceFeedback.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionGoal.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceActionGoal.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/KwastDetection.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/KwastDetection.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceGoal.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceGoal.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceAction.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/_package_PickAndPlaceAction.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceResult.lisp, /home/student/Git-projects/robot_project/devel/share/common-lisp/ros/hoofdprogramma/msg/PickAndPlaceResult.lisp)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceResult.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceAction.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceGoal.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg)
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/cmake/hoofdprogramma-msg-paths.cmake, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogramma-msg-paths.cmake)
 Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/cmake/hoofdprogrammaConfig.cmake, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogrammaConfig.cmake)
 Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/cmake/hoofdprogrammaConfig-version.cmake, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogrammaConfig-version.cmake)
-Symlinking /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogramma-msg-extras.cmake
+Linked: (/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/cmake/hoofdprogramma-msg-extras.cmake, /home/student/Git-projects/robot_project/devel/share/hoofdprogramma/cmake/hoofdprogramma-msg-extras.cmake)

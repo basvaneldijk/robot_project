@@ -19,13 +19,13 @@ def generate_launch_description():
     camera_model = LaunchConfiguration('camera_model',  default = 'OAK-D')
     tf_prefix    = LaunchConfiguration('tf_prefix',     default = 'oak')
     base_frame   = LaunchConfiguration('base_frame',    default = 'oak-d_frame')
-    parent_frame = LaunchConfiguration('parent_frame',  default = 'oak-d-base-frame')
-    cam_pos_x    = LaunchConfiguration('cam_pos_x',     default = '0.0')
-    cam_pos_y    = LaunchConfiguration('cam_pos_y',     default = '0.0')
-    cam_pos_z    = LaunchConfiguration('cam_pos_z',     default = '0.0')
-    cam_roll     = LaunchConfiguration('cam_roll',      default = '1.5708')
-    cam_pitch    = LaunchConfiguration('cam_pitch',     default = '0.0')
-    cam_yaw      = LaunchConfiguration('cam_yaw',       default = '1.5708')
+    parent_frame = LaunchConfiguration('parent_frame',  default = 'world')#oak-d-base-frame
+    cam_pos_x    = LaunchConfiguration('cam_pos_x',     default = '0.1475')#0
+    cam_pos_y    = LaunchConfiguration('cam_pos_y',     default = '0.0775')#0
+    cam_pos_z    = LaunchConfiguration('cam_pos_z',     default = '0.8475')#0
+    cam_roll     = LaunchConfiguration('cam_roll',      default = '3.14')#1.5708
+    cam_pitch    = LaunchConfiguration('cam_pitch',     default = '0.0')#0
+    cam_yaw      = LaunchConfiguration('cam_yaw',       default = '-1.5708')#1.5708
     namespace    = LaunchConfiguration('namespace',     default = '')
 
     declare_namespace_cmd = DeclareLaunchArgument(
