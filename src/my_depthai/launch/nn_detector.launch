@@ -175,5 +175,9 @@
       <remap from="image_workspace_out" to="/stereo_inertial_nn_publisher/color/image_workspace"/>
   </node>
 
+<node name="pose_transform_listener" pkg="my_depthai" type="transform_pose_listener.py" output="screen" />
+<node name="kwast_pose_transformer" pkg="my_depthai" type="publish_transformed_pose.py" output="screen" />
+
 
 </launch>
+

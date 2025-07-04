@@ -7,7 +7,7 @@
     License: CC BY-NC-SA
 '''
 
-from _future_ import print_function
+from __future__ import print_function
 
 import roslib
 import sys
@@ -25,7 +25,7 @@ import json
 
 class detection_displayer:
 
-    def _init_(self, config_file):
+    def __init__(self, config_file):
         rospy.loginfo(config_file)
         self.display_image = False
 
@@ -139,4 +139,6 @@ def main(args):
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    main(sys.argv)
+
+
