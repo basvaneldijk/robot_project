@@ -2,7 +2,7 @@
 import rospy
 import actionlib
 from geometry_msgs.msg import Pose
-from kwast_sorteerder.msg import PickAndPlaceAction, PickAndPlaceResult, PickAndPlaceFeedback
+from hoofdprogramma.msg import PickAndPlaceAction, PickAndPlaceResult, PickAndPlaceFeedback
 from robot_controller import RobotController
 
 class PickAndPlaceServer(object):
@@ -10,7 +10,7 @@ class PickAndPlaceServer(object):
         rospy.init_node('pick_and_place_server')
 
         self.server = actionlib.SimpleActionServer('/pick_and_place', PickAndPlaceAction,
-                                                   execute_cb=self.execute_cb, auto_start=False)
+        execute_cb=self.execute_cb, auto_start=False)
         self.server.start()
         self.robot = RobotController()
         rospy.loginfo("PickAndPlace action server actief.")
