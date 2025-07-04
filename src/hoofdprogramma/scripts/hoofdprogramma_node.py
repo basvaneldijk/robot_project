@@ -30,6 +30,7 @@ class Hoofdprogramma(object):
         self.kwast_ontvangen = False
         self.kwast_pose = None
         self.kwast_type = ""
+        self.homing_done = False  # <-- Nieuw toegevoegd
 
         rospy.spin()
 
@@ -49,6 +50,9 @@ class Hoofdprogramma(object):
     def carousel_status_cb(self, msg):
         if msg.data == "cyclus_done":
             rospy.loginfo("Carrouselpositie bereikt. Wacht op kwastdetectie...")
+        elif msg.data == ">> Homing klaar.":
+            rospy.loginfo("Homing is voltooid.")
+            self.homing_done = True
 
     def kwast_detectie_cb(self, msg):
         rospy.loginfo("Kwast gedetecteerd: %s", msg.kwast_type)
@@ -57,9 +61,12 @@ class Hoofdprogramma(object):
         self.kwast_ontvangen = True
 
     def start_cyclusflow(self):
-        # 0. Carousel naar home
-        rospy.loginfo("Stuur carousel naar home...")
-        self.carousel_pub.publish("home")
+        # 0. Carousel naar home (alleen als het nog niet is gedaan)
+        if not self.homing_done:
+            rospy.loginfo("Stuur carousel naar home...")
+            self.carousel_pub.publish("home")
+            rospy.sleep(1.0)  # Geef tijd voor homing start
+            return  # wacht eerst op homing voordat cyclus start
 
         # 1. Carrousel start
         rospy.loginfo("Start carrousel...")

@@ -70,7 +70,7 @@ class CarouselController:
                         rospy.loginfo("Cyclus afgerond, terug naar standby.")
                         self.state = 0
 
-                    elif "homingDone" in decoded:
+                    elif "homing klaar" in decoded:
                         rospy.loginfo("Homing afgerond, terug naar standby.")
                         self.state = 0
 
