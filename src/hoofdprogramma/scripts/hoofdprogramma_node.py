@@ -56,10 +56,28 @@ class Hoofdprogramma(object):
             rospy.loginfo("Carrouselpositie bereikt. Wacht op kwastdetectie...")
 
     def kwast_detectie_cb(self, msg):
+        rospy.loginfo("Kwast gedetecteerd: %s", msg.kwast_type)
+    
+        # Opslaan van data
         self.kwast_pose = msg.pose
         self.kwast_type = msg.kwast_type
-        self.kwast_ontvangen = True
-        rospy.loginfo("Kwast gedetecteerd: %s", self.kwast_type)
+    
+     # Start direct pick-and-place
+        rospy.loginfo("Start pick-and-place automatisch")
+        goal = PickAndPlaceGoal()
+        goal.target_pose = self.kwast_pose
+        goal.kwast_type = self.kwast_type
+
+        self.pick_client.send_goal(goal)
+        self.pick_client.wait_for_result()
+
+        result = self.pick_client.get_result()
+        if result and result.success:
+            rospy.loginfo("Pick-and-place geslaagd.")
+            self.status_pub.publish("geslaagd")
+        else:
+            rospy.logwarn("Pick-and-place mislukt.")
+            self.status_pub.publish("mislukt")
 
     def start_pick_and_place(self):
         rospy.loginfo("Start pick-and-place...")
