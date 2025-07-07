@@ -1,0 +1,4 @@
+<!-- <launch>
+  <node pkg="rosparam" type="rosparam" name="wait_dummy" args="load /dev/null" />
+  <node pkg="rosservice" type="rosservice" name="wait_for_move_group" args="call /move_group/get_planning_scene '{}'" /> 
+</launch> -->

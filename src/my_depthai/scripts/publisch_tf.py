@@ -9,6 +9,7 @@ import json
 import math
 import random
 
+from std_msgs.msg import String
 from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped, PoseStamped
 from visualization_msgs.msg import Marker
@@ -26,6 +27,9 @@ class Publisch_TF:
 
         self.class_names_dict = {label: 0 for label in self.class_names}
 
+        self.vision_enabled = False
+        rospy.Subscriber('/vision_enable', String, self.vision_enable_cb)
+
         self.detections_sub = rospy.Subscriber(
             "/stereo_inertial_nn_publisher/color/detections",
             SpatialDetectionArray,
@@ -42,7 +46,20 @@ class Publisch_TF:
             "4-pen": rospy.Publisher("/kwast_pen", PoseStamped, queue_size=10),
         }
 
+    def vision_enable_cb(self, msg):
+        if msg.data == "aan":
+            self.vision_enabled = True
+            rospy.loginfo("Vision detectie INGESCHAKELD")
+        else:
+            self.vision_enabled = False
+            rospy.loginfo("Vision detectie UITGESCHAKELD")
+
     def spatial_dections_callback(self, msg):
+        if not self.vision_enabled:
+            return
+
+        now = rospy.Time.now()
+
         for label in self.class_names:
             self.class_names_dict[label] = 0
 
@@ -57,7 +74,7 @@ class Publisch_TF:
 
             # TF publishing
             t = TransformStamped()
-            t.header.stamp = rospy.Time.now()
+            t.header.stamp = now
             t.header.frame_id = "oak_rgb_camera_optical_frame"
             t.child_frame_id = child_frame_id
             t.transform.translation.x = position.x
@@ -71,7 +88,7 @@ class Publisch_TF:
 
             # Marker
             text_marker = Marker()
-            text_marker.header.stamp = rospy.Time.now()
+            text_marker.header.stamp = now
             text_marker.header.frame_id = child_frame_id
             text_marker.type = Marker.TEXT_VIEW_FACING
             text_marker.pose.position.x = 0.0
@@ -105,7 +122,7 @@ class Publisch_TF:
             # Publish pose per kwast-type
             if label_name in self.label_to_topic and self.class_names_dict[label_name] == 1:
                 pose = PoseStamped()
-                pose.header.stamp = rospy.Time.now()
+                pose.header.stamp = now
                 pose.header.frame_id = "oak_rgb_camera_optical_frame"
                 pose.pose.position.x = position.x
                 pose.pose.position.y = -position.y
@@ -119,6 +136,8 @@ class Publisch_TF:
 
 def main(args):
     rospy.init_node('publisch_tf', anonymous=True)
+    rospy.sleep(0.5)
+
     node_name = rospy.get_name()
     nnConfig = rospy.get_param(node_name + '/nnConfig')
     resourceBaseFolder = rospy.get_param(node_name + '/resourceBaseFolder')

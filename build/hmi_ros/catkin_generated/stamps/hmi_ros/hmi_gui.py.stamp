@@ -3,24 +3,33 @@
 import Tkinter as tk
 import rospy
 from std_msgs.msg import String
+import threading
 
 class HMIApp:
-    def __init__(self, master):
-        self.master = master
-        self.master.title("ROS HMI")
-        self.master.geometry("300x450")
-        self.master.configure(bg="#dcdcdc")
-
-        # ROS Node en Publisher
+    def __init__(self):
         rospy.init_node('ros_hmi_node', anonymous=True)
         self.command_pub = rospy.Publisher('/hmi_commands', String, queue_size=10)
         rospy.Subscriber('/status_light', String, self.update_lights)
 
-        # Interne status
-        self.state = "startup"  # eerste keer opstarten in 'startup'
+        self.state = "startup"
 
-        # Frame voor knoppen
-        self.button_frame = tk.Frame(master, bg="#dcdcdc")
+        # Start GUI in aparte thread
+        self.gui_thread = threading.Thread(target=self.setup_gui)
+        self.gui_thread.daemon = True
+        self.gui_thread.start()
+
+        # Start ROS timer
+        rospy.Timer(rospy.Duration(0.1), self.timer_callback)
+
+        rospy.spin()  # hou ROS draaiend
+
+    def setup_gui(self):
+        self.master = tk.Tk()
+        self.master.title("ROS HMI")
+        self.master.geometry("300x450")
+        self.master.configure(bg="#dcdcdc")
+
+        self.button_frame = tk.Frame(self.master, bg="#dcdcdc")
         self.button_frame.pack(pady=10)
 
         self.single_btn = tk.Button(self.button_frame, text="Single Start", width=12, command=lambda: self.send_command("single_start"))
@@ -41,25 +50,25 @@ class HMIApp:
         self.noodstop_btn = tk.Button(self.button_frame, text="Noodstop", width=26, bg="red", fg="white", command=lambda: self.send_command("noodstop"))
         self.noodstop_btn.grid(row=4, column=0, columnspan=2, pady=5)
 
-        self.status_label = tk.Label(master, text="Statuslampjes:", font=("Arial", 12))
+        self.status_label = tk.Label(self.master, text="Statuslampjes:", font=("Arial", 12))
         self.status_label.pack(pady=10)
 
-        self.green_light = tk.Label(master, text="Wacht op start", bg="gray", width=15, height=2)
+        self.green_light = tk.Label(self.master, text="Wacht op start", bg="gray", width=15, height=2)
         self.green_light.pack(pady=2)
 
-        self.orange_light = tk.Label(master, text="In bedrijf", bg="gray", width=15, height=2)
+        self.orange_light = tk.Label(self.master, text="In bedrijf", bg="gray", width=15, height=2)
         self.orange_light.pack(pady=2)
 
-        self.red_light = tk.Label(master, text="Fout", bg="gray", width=15, height=2)
+        self.red_light = tk.Label(self.master, text="Fout", bg="gray", width=15, height=2)
         self.red_light.pack(pady=2)
 
-        self.blue_light = tk.Label(master, text="Homing", bg="gray", width=15, height=2)
+        self.blue_light = tk.Label(self.master, text="Homing", bg="gray", width=15, height=2)
         self.blue_light.pack(pady=2)
 
         self.update_buttons()
         self.set_all_lights("gray")
 
-        self.master.after(100, self.ros_spin)
+        self.master.mainloop()
 
     def send_command(self, cmd):
         rospy.loginfo("Verzend commando: {}".format(cmd))
@@ -85,10 +94,7 @@ class HMIApp:
         self.state = "home"
         self.set_all_lights("gray")
         self.blue_light.config(bg="blue")
-
-        # Wacht even, dan direct naar standby
         self.master.after(2000, self.enter_standby)
-
         self.update_buttons()
 
     def enter_standby(self):
@@ -107,45 +113,13 @@ class HMIApp:
         self.update_buttons()
 
     def update_buttons(self):
-        if self.state == "startup":
-            self.single_btn.config(state='disabled')
-            self.cyclus_btn.config(state='disabled')
-            self.stop_btn.config(state='disabled')
-            self.noodstop_btn.config(state='normal')
-            self.reset_btn.config(state='disabled')
-            self.home_btn.config(state='normal')
-
-        elif self.state == "standby":
-            self.single_btn.config(state='normal')
-            self.cyclus_btn.config(state='normal')
-            self.stop_btn.config(state='disabled')
-            self.noodstop_btn.config(state='normal')
-            self.reset_btn.config(state='disabled')
-            self.home_btn.config(state='disabled')  # niet meer nodig
-
-        elif self.state in ["single_active", "cyclus_active"]:
-            self.single_btn.config(state='disabled')
-            self.cyclus_btn.config(state='disabled')
-            self.stop_btn.config(state='normal')
-            self.noodstop_btn.config(state='normal')
-            self.reset_btn.config(state='disabled')
-            self.home_btn.config(state='disabled')
-
-        elif self.state == "vergrendeld":
-            self.single_btn.config(state='disabled')
-            self.cyclus_btn.config(state='disabled')
-            self.stop_btn.config(state='disabled')
-            self.noodstop_btn.config(state='disabled')
-            self.reset_btn.config(state='normal')
-            self.home_btn.config(state='disabled')
-
-        elif self.state == "home":
-            self.single_btn.config(state='disabled')
-            self.cyclus_btn.config(state='disabled')
-            self.stop_btn.config(state='disabled')
-            self.noodstop_btn.config(state='normal')
-            self.reset_btn.config(state='disabled')
-            self.home_btn.config(state='disabled')
+        s = self.state
+        self.single_btn.config(state='normal' if s == "standby" else 'disabled')
+        self.cyclus_btn.config(state='normal' if s == "standby" else 'disabled')
+        self.stop_btn.config(state='normal' if s in ["single_active", "cyclus_active"] else 'disabled')
+        self.noodstop_btn.config(state='normal' if s != "vergrendeld" else 'disabled')
+        self.reset_btn.config(state='normal' if s == "vergrendeld" else 'disabled')
+        self.home_btn.config(state='normal' if s == "startup" else 'disabled')
 
     def update_lights(self, msg):
         status = msg.data.lower()
@@ -170,21 +144,13 @@ class HMIApp:
         self.red_light.config(bg=color)
         self.blue_light.config(bg=color)
 
-    def ros_spin(self):
-        if not rospy.is_shutdown():
-            rospy.spin_once()
-            self.master.after(100, self.ros_spin)
+    def timer_callback(self, event):
+        # Hier kun je extra periodieke acties doen, zoals checks of updates
+        pass
 
-# Monkey-patch voor rospy.spin_once()
-def spin_once():
-    import select
-    r, _, _ = select.select([rospy.core._poller], [], [], 0.01)
-    if r:
-        rospy.rostime.wallsleep(0.01)
-
-rospy.spin_once = spin_once
 
 if __name__ == '__main__':
-    root = tk.Tk()
-    app = HMIApp(root)
-    root.mainloop()
+    try:
+        HMIApp()
+    except rospy.ROSInterruptException:
+        pass

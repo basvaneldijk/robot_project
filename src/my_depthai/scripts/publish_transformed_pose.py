@@ -25,6 +25,13 @@ class PoseTransformer:
 
     def callback(self, msg, topic_name):
         try:
+            # Als de tijd 0 is (default of fout), gebruik dan rospy.Time.now()
+            stamp = msg.header.stamp
+            if stamp.to_sec() == 0.0:
+                rospy.logwarn("Ongeldige tijdsstempel in %s, vervangen door rospy.Time.now()", topic_name)
+                msg.header.stamp = rospy.Time.now()
+
+            # Probeer de transform
             transformed = self.tf_buffer.transform(msg, self.target_frame, timeout=rospy.Duration(1.0))
             transformed.header.frame_id = self.target_frame
             self.topics[topic_name].publish(transformed)

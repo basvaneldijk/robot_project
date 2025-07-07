@@ -11,8 +11,18 @@ class PickAndPlaceServer(object):
 
         self.server = actionlib.SimpleActionServer('/pick_and_place', PickAndPlaceAction,
         execute_cb=self.execute_cb, auto_start=False)
-        self.server.start()
+    
+        rospy.loginfo("Wacht op move_group service...")
+        try:
+            rospy.wait_for_service('/move_group/get_planning_scene', timeout=10)
+            rospy.loginfo("move_group is beschikbaar!")
+        except rospy.ROSException:
+            rospy.logerr("Timeout: move_group service niet beschikbaar.")
+        return
+        rospy.loginfo("move_group is beschikbaar!")
+
         self.robot = RobotController()
+        self.server.start()
         rospy.loginfo("PickAndPlace action server actief.")
 
     def execute_cb(self, goal):

@@ -21,18 +21,23 @@ class Hoofdprogramma(object):
         # Publishers
         self.carousel_pub = rospy.Publisher('/carousel_command', String, queue_size=10)
         self.status_pub = rospy.Publisher('/status_light', String, queue_size=10)
+        self.vision_enable_pub = rospy.Publisher('/vision_enable', String, queue_size=1)
 
         # Subscribers
         rospy.Subscriber('/carousel_status', String, self.carousel_status_cb)
         rospy.Subscriber('/kwast_detectie', KwastDetection, self.kwast_detectie_cb)
         rospy.Subscriber('/hmi_commands', String, self.hmi_command_cb)
-        rospy.Subscriber('/kwast_norm', PoseStamped, self.vision_pose_cb)
-        rospy.Subscriber('/kwast_dik', PoseStamped, self.vision_pose_cb)
-        rospy.Subscriber('/kwast_rub', PoseStamped, self.vision_pose_cb)
-        rospy.Subscriber('/kwast_pen', PoseStamped, self.vision_pose_cb)
+        
+        #Vision topics
+        self.sub_vision_topics = [
+            ('/kwast_norm', None),
+            ('/kwast_dik', None),
+            ('/kwast_rub', None),
+            ('/kwast_pen', None)
+        ]
 
         # Action client voor pick-and-place
-        self.pick_client = actionlib.SimpleActionClient('/pick_and_place', PickAndPlaceAction)
+        self.pick_client = actionlib.SimpleActionClient('/pick_and_place_server', PickAndPlaceAction)
         rospy.loginfo("Wachten op robot action server...")
         self.pick_client.wait_for_server()
         rospy.loginfo("Verbonden met robot action server")
@@ -52,8 +57,16 @@ class Hoofdprogramma(object):
             self.start_cyclusflow()
 
     def carousel_status_cb(self, msg):
-        if msg.data == "cyclus_done":
+        if msg.data == "cycle_done":
+            rospy.logwarn("DEBUG: cyclus_done ontvangen")
             self.vision_active = True
+            rospy.logwarn("DEBUG: vision_active = True gezet")
+            self.start_vision_subscribers()
+            rospy.logwarn("DEBUG: vision_subscribers gestart")
+            self.vision_enable_pub.publish("aan")
+            rospy.logwarn("DEBUG: vision_enable = AAN gepubliceerd")
+            rospy.sleep(1.0)
+
             rospy.loginfo("Carrouselpositie bereikt. Wacht op kwastdetectie...")
 
             # Reset flags om nieuwe detectie mogelijk te maken
@@ -80,6 +93,8 @@ class Hoofdprogramma(object):
             self.kwast_type = kwast_type
             self.kwast_ontvangen = True
             self.vision_active = False  # reset zodat hij niet meer verwerkt
+            self.stop_vision_subscribers()
+            self.vision_enable_pub.publish("uit")
 
     def kwast_detectie_cb(self, msg):
         rospy.loginfo("Kwast gedetecteerd: %s", msg.kwast_type)
@@ -100,7 +115,7 @@ class Hoofdprogramma(object):
         self.carousel_pub.publish("single_start")
 
         # 2. Wacht op kwastdetectie
-        timeout = rospy.Time.now() + rospy.Duration(15.0)
+        timeout = rospy.Time.now() + rospy.Duration(30.0)
         while not self.kwast_ontvangen and rospy.Time.now() < timeout:
             rospy.sleep(0.1)
 
@@ -110,6 +125,12 @@ class Hoofdprogramma(object):
             return
 
         # 3. Start pick-and-place
+        rospy.loginfo("Kwast gevonden: type=%s, positie=(%.3f, %.3f, %.3f)", 
+              self.kwast_type,
+              self.kwast_pose.position.x,
+              self.kwast_pose.position.y,
+              self.kwast_pose.position.z)
+        
         goal = PickAndPlaceGoal()
         goal.target_pose = self.kwast_pose
         goal.kwast_type = self.kwast_type
@@ -133,6 +154,17 @@ class Hoofdprogramma(object):
         # 5. Meld cyclus voltooid
         self.status_pub.publish("cyclus_voltooid")
         rospy.loginfo("Cyclus afgerond.")
+
+    def start_vision_subscribers(self):
+        for i, (topic, sub) in enumerate(self.sub_vision_topics):
+            if sub is None:
+                self.sub_vision_topics[i] = (topic, rospy.Subscriber(topic, PoseStamped, self.vision_pose_cb))
+
+    def stop_vision_subscribers(self):
+        for i, (topic, sub) in enumerate(self.sub_vision_topics):
+            if sub is not None:
+                sub.unregister()
+                self.sub_vision_topics[i] = (topic, None)
 
 if __name__ == '__main__':
     try:

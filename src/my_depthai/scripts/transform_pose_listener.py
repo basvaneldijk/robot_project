@@ -21,19 +21,24 @@ class PoseTransformer:
         }
 
     def callback(self, pose_msg):
+        # Check op ongeldige tijd
+        if pose_msg.header.stamp.to_sec() == 0.0:
+            rospy.logwarn("Pose met tijdsstempel 0 ontvangen, vervangen door rospy.Time.now()")
+            pose_msg.header.stamp = rospy.Time.now()
+
         for frame in self.target_frames:
             try:
                 transformed_pose = self.tf_buffer.transform(pose_msg, frame, timeout=rospy.Duration(1.0))
                 rospy.logdebug("---- [%s] in frame [%s] ----", pose_msg.header.frame_id, frame)
                 rospy.logdebug("Position: x=%.3f, y=%.3f, z=%.3f", 
-                              transformed_pose.pose.position.x,
-                              transformed_pose.pose.position.y,
-                              transformed_pose.pose.position.z)
+                            transformed_pose.pose.position.x,
+                            transformed_pose.pose.position.y,
+                            transformed_pose.pose.position.z)
                 rospy.logdebug("Orientation (quat): x=%.3f, y=%.3f, z=%.3f, w=%.3f",
-                              transformed_pose.pose.orientation.x,
-                              transformed_pose.pose.orientation.y,
-                              transformed_pose.pose.orientation.z,
-                              transformed_pose.pose.orientation.w)
+                            transformed_pose.pose.orientation.x,
+                            transformed_pose.pose.orientation.y,
+                            transformed_pose.pose.orientation.z,
+                            transformed_pose.pose.orientation.w)
             except Exception as e:
                 rospy.logwarn("Transform to frame [%s] failed: %s", frame, str(e))
 

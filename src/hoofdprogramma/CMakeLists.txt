@@ -16,8 +16,8 @@ add_message_files(
 )
 
 add_action_files(
-  FILES
-  PickAndPlace.action
+  DIRECTORY action
+  FILES PickAndPlace.action
 )
 
 generate_messages(

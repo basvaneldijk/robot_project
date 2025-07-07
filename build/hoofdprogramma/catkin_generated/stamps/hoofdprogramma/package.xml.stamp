@@ -10,18 +10,22 @@
   <!-- Build tools -->
   <buildtool_depend>catkin</buildtool_depend>
 
-  <!-- Dependencies for messages/actions -->
+  <!-- Dependencies voor actions en messages -->
   <build_depend>message_generation</build_depend>
-  <exec_depend>message_runtime</exec_depend>
+  <build_depend>actionlib_msgs</build_depend>
 
-  <!-- ROS dependencies -->
+  <build_export_depend>actionlib_msgs</build_export_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>actionlib_msgs</exec_depend>
+
+  <!-- ROS afhankelijkheden -->
   <depend>rospy</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>actionlib</depend>
-  <depend>actionlib_msgs</depend>
 
   <export>
-    <!-- No export needed -->
+    <!-- Geen export nodig -->
   </export>
 </package>
