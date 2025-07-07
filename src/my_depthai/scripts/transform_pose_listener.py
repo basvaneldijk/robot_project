@@ -24,12 +24,12 @@ class PoseTransformer:
         for frame in self.target_frames:
             try:
                 transformed_pose = self.tf_buffer.transform(pose_msg, frame, timeout=rospy.Duration(1.0))
-                rospy.loginfo("---- [%s] in frame [%s] ----", pose_msg.header.frame_id, frame)
-                rospy.loginfo("Position: x=%.3f, y=%.3f, z=%.3f", 
+                rospy.logdebug("---- [%s] in frame [%s] ----", pose_msg.header.frame_id, frame)
+                rospy.logdebug("Position: x=%.3f, y=%.3f, z=%.3f", 
                               transformed_pose.pose.position.x,
                               transformed_pose.pose.position.y,
                               transformed_pose.pose.position.z)
-                rospy.loginfo("Orientation (quat): x=%.3f, y=%.3f, z=%.3f, w=%.3f",
+                rospy.logdebug("Orientation (quat): x=%.3f, y=%.3f, z=%.3f, w=%.3f",
                               transformed_pose.pose.orientation.x,
                               transformed_pose.pose.orientation.y,
                               transformed_pose.pose.orientation.z,

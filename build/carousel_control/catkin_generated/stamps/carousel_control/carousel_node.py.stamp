@@ -1,4 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import rospy
 import serial
 from std_msgs.msg import String
@@ -7,55 +8,81 @@ class CarouselController:
     def __init__(self):
         rospy.init_node('carousel_node')
         rospy.loginfo("Start carousel node...")
+        
+        self.state = 0  #  Voeg dit toe om het probleem op te lossen!
 
-        # Verbind met Arduino
+        self.cmd_sub = rospy.Subscriber("/carousel_command", String, self.command_callback)
+        self.status_pub = rospy.Publisher("/carousel_status", String, queue_size=10)
+
         try:
-            self.serial = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+            self.arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
             rospy.sleep(2)
-            rospy.loginfo("Verbinding met Arduino via /dev/ttyACM0 succesvol.")
+            self.arduino.flushInput()
+            self.arduino.flushOutput()
+            rospy.loginfo("Connected to Arduino on /dev/ttyACM0")
         except serial.SerialException as e:
-            rospy.logerr("Fout bij openen van seriele poort: {}".format(e))
+            rospy.logerr("Error opening serial port: {}".format(e))
             exit(1)
 
-        # Subscriber voor commando's
-        rospy.Subscriber('/carousel_command', String, self.command_callback)
-
-        # Publisher voor status (optioneel)
         self.status_pub = rospy.Publisher('/carousel_status', String, queue_size=10)
-
         self.rate = rospy.Rate(10)
 
-        self.last_msg = ""  # Houdt laatst gepubliceerde bericht bij
-
     def command_callback(self, msg):
-        cmd = msg.data.strip().lower()
-        rospy.loginfo("Ontvangen commando: {}".format(cmd))
-        try:
-            self.serial.write(cmd + "\n")
-            rospy.loginfo("Verzend commando: {}".format(cmd))
-        except Exception as e:
-            rospy.logerr("Fout bij schrijven naar Arduino: {}".format(e))
+        command = msg.data.encode('utf-8').decode('ascii', errors='ignore').strip()
+        rospy.loginfo("Received command: %s", command)
+        rospy.loginfo("Command ASCII: %s", [ord(c) for c in command])  # Debug
+
+        if command == "home":
+            self.arduino.write(b'home\n')
+            rospy.loginfo("Sent command: home")
+            self.state = 1
+
+        elif command == "single_start":
+            if self.state == 0:
+                self.arduino.write(b'single_start\n')
+                rospy.loginfo("Sent command: single_start")
+                self.state = 1
+            else:
+                rospy.logwarn("Ignored single_start: motor is busy (state = %d)", self.state)
+
+        elif command == "auto_run":
+            if self.state == 0:
+                self.arduino.write(b'auto_run\n')
+                rospy.loginfo("Sent command: auto_run")
+                self.state = 1
+            else:
+                rospy.logwarn("Ignored auto_run: motor is busy (state = %d)", self.state)
+
+        else:
+            rospy.logwarn("Unknown command: %s", command)
 
     def read_status(self):
         try:
-            line = self.serial.readline()
+            line = self.arduino.readline()
             if line:
-                line_str = line.strip()
-                if isinstance(line_str, bytes):
-                    line_str = line_str.decode('utf-8')
-                # Filter dubbele berichten, stuur alleen door als nieuw
-                if line_str != self.last_msg:
-                    self.status_pub.publish(line_str)
-                    rospy.loginfo("Status van Arduino: {}".format(line_str))
-                    self.last_msg = line_str
+                try:
+                    decoded = line.strip().decode('utf-8')
+                    self.status_pub.publish(String(decoded))
+                    rospy.loginfo("Status from Arduino: {}".format(decoded))
+
+                    # Check op cyclus klaar of homing klaar
+                    if "cycle_done" in decoded:
+                        rospy.loginfo("Cyclus afgerond, terug naar standby.")
+                        self.state = 0
+
+                    elif "Homing klaar" in decoded or "homing_done" in decoded:
+                        rospy.loginfo("Homing afgerond, terug naar standby.")
+                        self.state = 0
+
+                except Exception as decode_error:
+                    rospy.logwarn("Decode error: {}".format(decode_error))
         except Exception as e:
-            rospy.logwarn("Fout bij lezen van Arduino: {}".format(e))
+            rospy.logwarn("Read error: {}".format(e))
 
     def run(self):
         while not rospy.is_shutdown():
             self.read_status()
             self.rate.sleep()
-
 
 if __name__ == "__main__":
     try:

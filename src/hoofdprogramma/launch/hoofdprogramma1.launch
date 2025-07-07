@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch parameters -->
+  <arg name="sim" default="false"/>
+  <arg name="robot_ip" default="192.168.1.158" />
+
+  <!-- Robot starten (real of sim) -->
+  <group unless="$(arg sim)">
+    <include file="$(find my_lite6_moveit_config)/launch/realMove_exec.launch">
+      <arg name="robot_ip" value="$(arg robot_ip)" />
+    </include>
+  </group>
+
+  <group if="$(arg sim)">
+    <include file="$(find my_lite6_moveit_config)/launch/demo.launch"/>
+  </group>
+
+  <!-- Wacht op move_group zodat robot ready is 
+  <node pkg="roslaunch" type="roslaunch" name="wait_for_move_group" args="wait" required="true" />
+   -->
+
+  <!-- Carousel controller -->
+  <node name="carousel_node" pkg="carousel_control" type="carousel_node.py" output="screen"/>
+
+  <!-- GUI -->
+  <node name="hmi_gui" pkg="hmi_ros" type="hmi_gui.py" output="screen"/>
+
+  <!-- Status-simulator -->
+  <node name="status_simulator" pkg="hmi_ros" type="status_simulator.py" output="screen"/>
+
+  <!-- Action server: Robotcontroller -->
+  <node name="pick_and_place_server" pkg="hoofdprogramma" type="pick_and_place_server.py" output="screen"/>
+
+  <!-- Action client: Hoofdprogramma -->
+  <node name="hoofdprogramma" pkg="hoofdprogramma" type="hoofdprogramma_node.py" output="screen"/>
+
+  <!-- Camera activeren -->
+  <include file="$(find my_depthai)/launch/nn_detector.launch"/>
+
+</launch>

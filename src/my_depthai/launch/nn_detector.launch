@@ -150,10 +150,10 @@
         <remap from="depth_registered/image_rect" to="/stereo_inertial_nn_publisher/stereo/image"/>
         <remap from="depth_registered/points" to="/stereo_inertial_nn_publisher/stereo/points"/>
     </node>
-
+<!--
   <group if="$(eval arg('enableRviz') == true)">
     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find my_depthai)/rviz/nn_detector.rviz" />
-  </group>
+  </group> -->
 
   <node  type="publisch_bouding_boxes.py" name="publisch_bouding_boxes" pkg="my_depthai" output="screen">
       <param name="nnConfig"                 value="$(arg nnConfig)"/>
@@ -163,7 +163,7 @@
       <remap from="detections" to="/stereo_inertial_nn_publisher/color/detections"/>
   </node>
 
-  <node  type="publisch_tf.py" name="publisch_tf" pkg="my_depthai" output="screen">
+  <node ns="publisch_tf"  type="publisch_tf.py" name="publisch_tf" pkg="my_depthai" output="screen">
       <param name="nnConfig"                 value="$(arg nnConfig)"/>
       <param name="resourceBaseFolder"       value="$(arg resourceBaseFolder)"/>
       <remap from="detections" to="/stereo_inertial_nn_publisher/color/detections"/>

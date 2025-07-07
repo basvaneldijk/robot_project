@@ -1,2 +1,2 @@
-/home/student/Git-projects/robot_project/devel/./cmake.lock 592
-/home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so 7
+/home/student/Git-projects/robot_project/devel/./cmake.lock 715
+/home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so 10

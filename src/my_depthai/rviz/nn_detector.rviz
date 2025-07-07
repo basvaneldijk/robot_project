@@ -157,6 +157,86 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        baseplate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_eef:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mountingplate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robotopstelling_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tcp_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        uflite_gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        xarm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModelManipulator
       Robot Description: robot_description
       TF Prefix: ""
@@ -170,9 +250,29 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        apple_0:
+        baseplate_link:
           Value: true
-        banana_0:
+        camera_link:
+          Value: true
+        link1:
+          Value: true
+        link2:
+          Value: true
+        link3:
+          Value: true
+        link4:
+          Value: true
+        link5:
+          Value: true
+        link6:
+          Value: true
+        link_base:
+          Value: true
+        link_eef:
+          Value: true
+        link_tcp:
+          Value: true
+        mountingplate_link:
           Value: true
         oak-d-base-frame:
           Value: false
@@ -194,8 +294,16 @@ Visualization Manager:
           Value: false
         oak_right_camera_optical_frame:
           Value: false
+        robotopstelling_link:
+          Value: true
+        tcp_link:
+          Value: true
+        uflite_gripper_link:
+          Value: true
         world:
           Value: false
+        xarm_link:
+          Value: true
       Marker Scale: 0.10000000149011612
       Name: TF
       Show Arrows: true
@@ -203,6 +311,24 @@ Visualization Manager:
       Show Names: true
       Tree:
         world:
+          baseplate_link:
+            mountingplate_link:
+              xarm_link:
+                link_base:
+                  link1:
+                    link2:
+                      link3:
+                        link4:
+                          link5:
+                            link6:
+                              link_eef:
+                                tcp_link:
+                                  {}
+                                uflite_gripper_link:
+                                  link_tcp:
+                                    {}
+          camera_link:
+            {}
           oak-d-base-frame:
             oak-d_frame:
               oak_imu_frame:
@@ -214,13 +340,12 @@ Visualization Manager:
                 {}
               oak_rgb_camera_frame:
                 oak_rgb_camera_optical_frame:
-                  apple_0:
-                    {}
-                  banana_0:
-                    {}
+                  {}
               oak_right_camera_frame:
                 oak_right_camera_optical_frame:
                   {}
+          robotopstelling_link:
+            {}
       Update Interval: 0
       Value: true
     - Alpha: 1

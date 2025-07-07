@@ -3,7 +3,7 @@ import rospy
 import actionlib
 from geometry_msgs.msg import Pose
 from hoofdprogramma.msg import PickAndPlaceAction, PickAndPlaceResult, PickAndPlaceFeedback
-from robot_controller import RobotController
+from robot_controller_node import RobotController
 
 class PickAndPlaceServer(object):
     def __init__(self):
