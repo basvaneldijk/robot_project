@@ -37,7 +37,7 @@ class Hoofdprogramma(object):
         ]
 
         # Action client voor pick-and-place
-        self.pick_client = actionlib.SimpleActionClient('/pick_and_place_server', PickAndPlaceAction)
+        self.pick_client = actionlib.SimpleActionClient('/pick_and_place', PickAndPlaceAction)
         rospy.loginfo("Wachten op robot action server...")
         self.pick_client.wait_for_server()
         rospy.loginfo("Verbonden met robot action server")
@@ -132,7 +132,10 @@ class Hoofdprogramma(object):
               self.kwast_pose.position.z)
         
         goal = PickAndPlaceGoal()
-        goal.target_pose = self.kwast_pose
+        goal.target_pose = PoseStamped()
+        goal.target_pose.header.stamp = rospy.Time.now()
+        goal.target_pose.header.frame_id = "base_link"  # of het juiste frame van je robot
+        goal.target_pose.pose = self.kwast_pose 
         goal.kwast_type = self.kwast_type
 
         rospy.loginfo("Start pick-and-place...")

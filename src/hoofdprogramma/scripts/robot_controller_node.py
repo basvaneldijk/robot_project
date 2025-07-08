@@ -1,12 +1,20 @@
 import rospy
 import moveit_commander
 import subprocess
-from geometry_msgs.msg import Pose
+from geometry_msgs.msg import PoseStamped
 from tf.transformations import quaternion_from_euler
 
 class RobotController(object):
     def __init__(self):
         moveit_commander.roscpp_initialize([])
+
+        rospy.logwarn("Wacht op move_group...")
+        try:
+            rospy.wait_for_service('/move_group/get_planning_scene', timeout=30)
+        except rospy.ROSException:
+            rospy.logerr("Timeout: move_group niet beschikbaar.")
+            exit(1)
+
         self.group = moveit_commander.MoveGroupCommander("arm")
         rospy.loginfo("RobotController geladen")
 
@@ -27,7 +35,13 @@ class RobotController(object):
     def move_to_pose(self, pose):
         rospy.loginfo("Beweeg naar opgegeven pose")
         self.group.set_start_state_to_current_state()
-        self.group.set_pose_target(pose)
+
+        pose_stamped = PoseStamped()
+        pose_stamped.header.frame_id = "base_link"  # vervang dit indien jouw robot ander frame gebruikt
+        pose_stamped.header.stamp = rospy.Time.now()
+        pose_stamped.pose = pose
+
+        self.group.set_pose_target(pose_stamped)
         success = self.group.go(wait=True)
         self.group.stop()
         self.group.clear_pose_targets()

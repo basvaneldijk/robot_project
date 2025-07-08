@@ -12,6 +12,7 @@ class PoseTransformer:
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
 
         self.target_frame = "world"  # <-- hier reken je alles naar om
+        
 
         self.topics = {
             "kwast_norm": rospy.Publisher("/kwast_norm_transformed", PoseStamped, queue_size=10),
@@ -25,17 +26,22 @@ class PoseTransformer:
 
     def callback(self, msg, topic_name):
         try:
-            # Als de tijd 0 is (default of fout), gebruik dan rospy.Time.now()
-            stamp = msg.header.stamp
-            if stamp.to_sec() == 0.0:
-                rospy.logwarn("Ongeldige tijdsstempel in %s, vervangen door rospy.Time.now()", topic_name)
+            # Corrigeer tijd als die fout is
+            if msg.header.stamp.to_sec() == 0.0:
+                rospy.logwarn("[%s] Ongeldige tijdsstempel, gebruik rospy.Time.now()", topic_name)
                 msg.header.stamp = rospy.Time.now()
 
-            # Probeer de transform
+            # Corrigeer frame_id als die leeg is
+            if not msg.header.frame_id:
+                rospy.logwarn("[%s] Lege frame_id, gebruik 'oak-d-base-frame'", topic_name)
+                msg.header.frame_id = "oak-d-base-frame"
+
+            # Transformeren
             transformed = self.tf_buffer.transform(msg, self.target_frame, timeout=rospy.Duration(1.0))
             transformed.header.frame_id = self.target_frame
             self.topics[topic_name].publish(transformed)
             rospy.loginfo("%s omgezet naar %s", topic_name, self.target_frame)
+
         except Exception as e:
             rospy.logwarn("Transform van %s naar %s mislukt: %s", topic_name, self.target_frame, str(e))
 

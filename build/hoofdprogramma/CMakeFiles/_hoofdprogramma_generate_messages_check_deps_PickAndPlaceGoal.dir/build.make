@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/student/Git-projects/robot_project/build/hoofdprogramma
 include CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal.dir/progress.make
 
 CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal:
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hoofdprogramma /home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hoofdprogramma /home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header
 
 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal: CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal
 _hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal: CMakeFiles/_hoofdprogramma_generate_messages_check_deps_PickAndPlaceGoal.dir/build.make

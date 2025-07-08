@@ -18,8 +18,8 @@ class PickAndPlaceServer(object):
             rospy.loginfo("move_group is beschikbaar!")
         except rospy.ROSException:
             rospy.logerr("Timeout: move_group service niet beschikbaar.")
-        return
-        rospy.loginfo("move_group is beschikbaar!")
+            exit(1)
+        
 
         self.robot = RobotController()
         self.server.start()
@@ -38,7 +38,7 @@ class PickAndPlaceServer(object):
         feedback.status = "Start pick"
         self.server.publish_feedback(feedback)
 
-        if not self.robot.pick(goal.target_pose):
+        if not self.robot.pick(goal.target_pose.pose):
             result.success = False
             self.server.set_aborted(result, "Pick mislukt")
             return

@@ -29,7 +29,7 @@ add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg" NAME_WE)
 add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg" NAME_WE)
@@ -39,7 +39,7 @@ add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg" NAME_WE)
 add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg" "actionlib_msgs/GoalID:geometry_msgs/Pose:hoofdprogramma/PickAndPlaceGoal:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg" "actionlib_msgs/GoalID:geometry_msgs/Pose:hoofdprogramma/PickAndPlaceGoal:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/PoseStamped:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/student/Git-projects/robot_project/src/hoofdprogramma/msg/KwastDetection.msg" NAME_WE)
@@ -54,7 +54,7 @@ add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg" NAME_WE)
 add_custom_target(_hoofdprogramma_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg" "hoofdprogramma/PickAndPlaceFeedback:actionlib_msgs/GoalID:hoofdprogramma/PickAndPlaceResult:actionlib_msgs/GoalStatus:hoofdprogramma/PickAndPlaceGoal:geometry_msgs/Pose:hoofdprogramma/PickAndPlaceActionResult:hoofdprogramma/PickAndPlaceActionGoal:hoofdprogramma/PickAndPlaceActionFeedback:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hoofdprogramma" "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg" "hoofdprogramma/PickAndPlaceFeedback:actionlib_msgs/GoalID:hoofdprogramma/PickAndPlaceResult:actionlib_msgs/GoalStatus:hoofdprogramma/PickAndPlaceActionResult:geometry_msgs/Quaternion:geometry_msgs/Pose:hoofdprogramma/PickAndPlaceActionGoal:hoofdprogramma/PickAndPlaceActionFeedback:std_msgs/Header:geometry_msgs/Point:geometry_msgs/PoseStamped:hoofdprogramma/PickAndPlaceGoal"
 )
 
 #
@@ -78,7 +78,7 @@ _generate_msg_cpp(hoofdprogramma
 _generate_msg_cpp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_cpp(hoofdprogramma
@@ -90,7 +90,7 @@ _generate_msg_cpp(hoofdprogramma
 _generate_msg_cpp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_cpp(hoofdprogramma
@@ -108,7 +108,7 @@ _generate_msg_cpp(hoofdprogramma
 _generate_msg_cpp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hoofdprogramma
 )
 
@@ -167,7 +167,7 @@ _generate_msg_eus(hoofdprogramma
 _generate_msg_eus(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_eus(hoofdprogramma
@@ -179,7 +179,7 @@ _generate_msg_eus(hoofdprogramma
 _generate_msg_eus(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_eus(hoofdprogramma
@@ -197,7 +197,7 @@ _generate_msg_eus(hoofdprogramma
 _generate_msg_eus(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hoofdprogramma
 )
 
@@ -256,7 +256,7 @@ _generate_msg_lisp(hoofdprogramma
 _generate_msg_lisp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_lisp(hoofdprogramma
@@ -268,7 +268,7 @@ _generate_msg_lisp(hoofdprogramma
 _generate_msg_lisp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_lisp(hoofdprogramma
@@ -286,7 +286,7 @@ _generate_msg_lisp(hoofdprogramma
 _generate_msg_lisp(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hoofdprogramma
 )
 
@@ -345,7 +345,7 @@ _generate_msg_nodejs(hoofdprogramma
 _generate_msg_nodejs(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_nodejs(hoofdprogramma
@@ -357,7 +357,7 @@ _generate_msg_nodejs(hoofdprogramma
 _generate_msg_nodejs(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_nodejs(hoofdprogramma
@@ -375,7 +375,7 @@ _generate_msg_nodejs(hoofdprogramma
 _generate_msg_nodejs(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hoofdprogramma
 )
 
@@ -434,7 +434,7 @@ _generate_msg_py(hoofdprogramma
 _generate_msg_py(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_py(hoofdprogramma
@@ -446,7 +446,7 @@ _generate_msg_py(hoofdprogramma
 _generate_msg_py(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hoofdprogramma
 )
 _generate_msg_py(hoofdprogramma
@@ -464,7 +464,7 @@ _generate_msg_py(hoofdprogramma
 _generate_msg_py(hoofdprogramma
   "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionResult.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionGoal.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceActionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/student/Git-projects/robot_project/devel/.private/hoofdprogramma/share/hoofdprogramma/msg/PickAndPlaceGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hoofdprogramma
 )
 

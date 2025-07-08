@@ -1,0 +1,3 @@
+Warning: Cannot symlink from /home/student/Git-projects/robot_project/devel/.private/my_depthai/lib/libnodelet_stereo.so to existing file /home/student/Git-projects/robot_project/devel/lib/libnodelet_stereo.so
+Warning: Source hash: b09d89e43d44e7a63dddc66aa64bf1ed
+Warning: Dest hash: 86c401cce50a2331ae75b8296df34541
